@@ -1,0 +1,12 @@
+{
+    "name": "online-zoo",
+    "version": "1.0.0",
+    "description": "Online-zoo is a platform that contains information about animals from various zoos with webcams.",
+    "main": "index.js",
+    "scripts": {
+        "dev": "live-server"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}
