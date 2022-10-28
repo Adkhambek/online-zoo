@@ -1,3 +1,6 @@
-body {
-    background-color: yellow;
-}
+@import "abstracts/variables";
+
+@import "base/reset";
+@import "base/typograhpy";
+
+@import "layout/header";
