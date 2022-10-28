@@ -1,0 +1,13 @@
+.nav {
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+    &__item {
+        margin-right: 58px;
+    }
+
+    .active {
+        color: $color-secondary;
+    }
+}

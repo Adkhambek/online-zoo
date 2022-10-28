@@ -1,6 +1,15 @@
 @import "abstracts/variables";
+@import "abstracts/mixins";
 
 @import "base/reset";
 @import "base/typograhpy";
+@import "base/utilities";
+
+@import "components/buttons";
 
 @import "layout/header";
+@import "layout/nav";
+@import "layout/footer";
+
+@import "pages/home";
+// @import "pages/donate";
