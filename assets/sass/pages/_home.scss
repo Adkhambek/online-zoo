@@ -1,0 +1,51 @@
+.hero {
+    color: $white;
+    text-transform: uppercase;
+    background: {
+        image: url("../../assets/images/banner.png");
+        size: cover;
+        position: center;
+        repeat: no-repeat;
+    }
+    padding: {
+        top: 86px;
+        bottom: 100px;
+    }
+
+    .container {
+        @include flex(center, flex-end);
+    }
+
+    &__box {
+        text-align: center;
+        width: 500px;
+    }
+
+    &__title {
+        position: relative;
+        font-size: 106px;
+        line-height: 75%;
+        margin-bottom: 60px;
+        z-index: 1;
+    }
+
+    .circle {
+        display: inline-block;
+        width: 465px;
+        height: 465px;
+        background-color: $color-secondary;
+        border-radius: 50%;
+        position: absolute;
+        left: -73px;
+        bottom: 10px;
+        z-index: -1;
+    }
+
+    .yellow {
+        color: $yellow;
+    }
+
+    .btn {
+        margin: 0 auto;
+    }
+}

@@ -78,6 +78,28 @@ h1 {
   white-space: nowrap;
   width: 1px; }
 
+.btn, .btn:link, .btn:visited {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  background-color: #f9804b;
+  color: #ffffff;
+  width: 298px;
+  height: 54px; }
+
+.btn:hover {
+  background-color: #e47209; }
+
+.btn:active, .btn:focus {
+  background-color: #4b9200; }
+
+.btn_pill {
+  border-radius: 25px; }
+
+.btn_rounded {
+  border-radius: 5px; }
+
 .header {
   background-color: #000000;
   color: #ffffff;
@@ -85,26 +107,71 @@ h1 {
   .header .container {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     padding: 14px 0; }
   .header__logo-link {
     width: 82px;
     height: 52px;
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     border: 1px solid #ffffff;
     border-radius: 2px;
-    margin-right: 63px; }
+    margin-right: 63px;
+    position: relative; }
   .header__logo-name {
     text-align: center; }
   .header__copyright {
     margin-left: auto; }
+  .header .bamboo {
+    position: absolute;
+    bottom: 5px;
+    left: 10px; }
 
 .nav__list {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  justify-content: flex-start; }
 
 .nav__item {
   margin-right: 58px; }
 
 .nav .active {
   color: #f9804b; }
+
+.hero {
+  color: #ffffff;
+  text-transform: uppercase;
+  background-image: url("../../assets/images/banner.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 86px;
+  padding-bottom: 100px; }
+  .hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; }
+  .hero__box {
+    text-align: center;
+    width: 500px; }
+  .hero__title {
+    position: relative;
+    font-size: 106px;
+    line-height: 75%;
+    margin-bottom: 60px;
+    z-index: 1; }
+  .hero .circle {
+    display: inline-block;
+    width: 465px;
+    height: 465px;
+    background-color: #f9804b;
+    border-radius: 50%;
+    position: absolute;
+    left: -73px;
+    bottom: 10px;
+    z-index: -1; }
+  .hero .yellow {
+    color: #ffee2e; }
+  .hero .btn {
+    margin: 0 auto; }

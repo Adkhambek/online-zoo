@@ -3,19 +3,18 @@
     color: $white;
     font-weight: 500;
     .container {
-        display: flex;
-        align-items: center;
+        @include flex;
         padding: 14px 0;
     }
 
     &__logo-link {
         width: 82px;
         height: 52px;
-        display: flex;
-        align-items: center;
+        @include flex;
         border: 1px solid $white;
         border-radius: 2px;
         margin-right: 63px;
+        position: relative;
     }
 
     &__logo-name {
@@ -24,5 +23,11 @@
 
     &__copyright {
         margin-left: auto;
+    }
+
+    .bamboo {
+        position: absolute;
+        bottom: 5px;
+        left: 10px;
     }
 }

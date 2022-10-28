@@ -1,0 +1,29 @@
+.btn {
+    &,
+    &:link,
+    &:visited {
+        @include flex(center, center);
+        text-transform: uppercase;
+        background-color: $color-secondary;
+        color: $white;
+        width: 298px;
+        height: 54px;
+    }
+
+    &:hover {
+        background-color: $dark-orange;
+    }
+
+    &:active,
+    &:focus {
+        background-color: $green;
+    }
+
+    &_pill {
+        border-radius: 25px;
+    }
+
+    &_rounded {
+        border-radius: 5px;
+    }
+}
