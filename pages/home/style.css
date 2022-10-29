@@ -175,3 +175,28 @@ h1 {
     color: #ffee2e; }
   .hero .btn {
     margin: 0 auto; }
+
+.backstage {
+  padding-top: 140px;
+  position: relative; }
+  .backstage .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .backstage__pattern {
+    position: absolute;
+    bottom: -90px;
+    right: 0px; }
+  .backstage__text-box {
+    width: 465px; }
+    .backstage__text-box h2 {
+      font-weight: normal;
+      font-size: 48px;
+      line-height: 58px;
+      margin-bottom: 20px; }
+    .backstage__text-box h3 {
+      font-weight: normal;
+      font-size: 24px;
+      margin: 54px 0 34px; }
+    .backstage__text-box p {
+      line-height: 20px; }
