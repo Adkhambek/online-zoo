@@ -91,7 +91,7 @@ h1 {
 .btn:hover {
   background-color: #e47209; }
 
-.btn:active, .btn:focus {
+.btn:active {
   background-color: #4b9200; }
 
 .btn_pill {
@@ -99,6 +99,27 @@ h1 {
 
 .btn_rounded {
   border-radius: 5px; }
+
+.slide-btn {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  font-size: 20px;
+  background-color: #f9804b;
+  color: #ffffff;
+  position: absolute; }
+  .slide-btn:hover {
+    background-color: #e47209; }
+  .slide-btn:active {
+    background-color: #4b9200; }
+  .slide-btn_prev {
+    bottom: 50%;
+    transform: translateY(-50%);
+    left: -80px; }
+  .slide-btn_next {
+    bottom: 50%;
+    transform: translateY(-50%);
+    right: -80px; }
 
 .header {
   background-color: #000000;
@@ -200,3 +221,59 @@ h1 {
       margin: 54px 0 34px; }
     .backstage__text-box p {
       line-height: 20px; }
+
+.pets {
+  padding: 180px 0 100px;
+  position: relative; }
+  .pets .container {
+    position: relative; }
+  .pets__list {
+    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: repeat(4, 366px);
+    grid-template-rows: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: calc(30px - 10px);
+    margin-bottom: 80px; }
+  .pets .btn {
+    margin: 0 auto; }
+  .pets .pattern {
+    position: absolute;
+    bottom: 0; }
+    .pets .pattern_first {
+      left: 0; }
+    .pets .pattern_second {
+      right: 0; }
+
+.pet {
+  border: 1px solid #fe9013;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden; }
+  .pet figcaption {
+    padding: 8px 14px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .pet figure:hover img {
+    transform: scale(1.5);
+    transition: 0.5s ease-in; }
+  .pet figure:hover figcaption {
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: linear-gradient(to bottom, transparent 0, #000000 100%);
+    color: #ffffff;
+    transition: 0.5s ease-in; }
+  .pet figure:hover figcaption > img {
+    display: none; }
+  .pet__name {
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase; }
+  .pet__native {
+    font-size: 15px; }
