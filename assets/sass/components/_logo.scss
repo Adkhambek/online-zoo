@@ -1,0 +1,19 @@
+.logo {
+    width: 82px;
+    height: 52px;
+    @include flex;
+    border: 1px solid $white;
+    border-radius: 2px;
+    margin-right: 63px;
+    position: relative;
+
+    h1 {
+        text-align: center;
+    }
+
+    img {
+        position: absolute;
+        bottom: 5px;
+        left: 10px;
+    }
+}

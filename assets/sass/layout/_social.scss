@@ -1,0 +1,34 @@
+.social {
+    &-item {
+        margin-bottom: 10px;
+    }
+
+    &-link {
+        @include flex(center);
+    }
+
+    &-link:hover p {
+        color: $color-secondary;
+    }
+
+    &-link:hover &-box {
+        background-color: $color-secondary;
+    }
+
+    &-link:active p {
+        color: $green !important;
+    }
+
+    &-link:active &-box {
+        background-color: $green;
+    }
+
+    &-box {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        margin-right: 12px;
+        @include flex(center, center);
+        background-color: rgba($smoke-gray, 0.5);
+    }
+}

@@ -1,0 +1,72 @@
+.footer {
+    background-color: $footer-background;
+    color: $white;
+    padding: {
+        top: 40px;
+        bottom: 50px;
+    }
+
+    .container {
+        @include flex(flex-start, space-between);
+    }
+
+    .btn {
+        margin: {
+            top: 68px;
+            bottom: 44px;
+        }
+    }
+
+    nav {
+        align-self: flex-end;
+    }
+
+    &__right {
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .author {
+        align-self: flex-end;
+    }
+
+    .designer {
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        font-weight: 400;
+        font-size: 24px;
+        margin-bottom: 14px;
+    }
+
+    form {
+        @include flex;
+    }
+
+    input[type="email"] {
+        width: 228px;
+        padding: 10px;
+        margin-right: 10px;
+        border: 1px solid $color-secondary;
+        border-radius: 2px;
+        color: $white;
+        font-size: 16px;
+        outline: none;
+    }
+
+    input[type="email"]:focus {
+        border: 1px solid $green;
+    }
+
+    input[type="email"]:focus + button {
+        color: $green;
+        border: 1px solid $green;
+    }
+
+    input[type="email"]::placeholder {
+        color: $smoke-gray;
+    }
+}

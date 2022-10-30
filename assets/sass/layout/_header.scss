@@ -7,20 +7,6 @@
         padding: 14px 0;
     }
 
-    &__logo-link {
-        width: 82px;
-        height: 52px;
-        @include flex;
-        border: 1px solid $white;
-        border-radius: 2px;
-        margin-right: 63px;
-        position: relative;
-    }
-
-    &__logo-name {
-        text-align: center;
-    }
-
     &__copyright {
         margin-left: auto;
     }

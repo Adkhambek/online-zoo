@@ -56,3 +56,18 @@
         right: -80px;
     }
 }
+
+.submit-btn {
+    cursor: pointer;
+    background-color: $light-gray;
+    color: $black;
+    font-size: 16px;
+    border: 1px solid $black-blue;
+    border-radius: 5px;
+    padding: 10px 40px;
+
+    &:active {
+        color: $green;
+        border: 1px solid $green;
+    }
+}
