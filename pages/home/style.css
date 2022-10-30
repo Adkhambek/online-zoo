@@ -340,3 +340,78 @@ h1 {
     margin-top: 60px;
     margin-right: auto;
     margin-left: auto; }
+
+.testimonial {
+  padding-top: 150px;
+  padding-bottom: 180px;
+  position: relative; }
+  .testimonial__pattern {
+    position: absolute;
+    bottom: 0;
+    right: 0; }
+  .testimonial__title {
+    font-size: 36px;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 47px; }
+  .testimonial__list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 20px; }
+  .testimonial__item {
+    color: #767474;
+    width: calc((1160px - 30px * 3) / 4);
+    border-radius: 20px;
+    padding: 15px;
+    background-color: #f1f3f2;
+    position: relative; }
+  .testimonial__item::before {
+    content: "";
+    background-image: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%);
+    border-radius: 20px;
+    top: -2px;
+    left: -2px;
+    bottom: -2px;
+    right: -2px;
+    position: absolute;
+    z-index: -1; }
+  .testimonial__header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 10px; }
+  .testimonial__profile {
+    margin-right: 10px;
+    border-radius: 50%;
+    width: 37px;
+    height: 37px; }
+  .testimonial__name {
+    font-weight: normal;
+    font-size: 16px;
+    color: #000000; }
+  .testimonial__location-date {
+    color: #bdbdbd; }
+  .testimonial__message {
+    height: 310px;
+    overflow-y: hidden;
+    line-height: 120%; }
+  .testimonial input[type="range"] {
+    appearance: none;
+    width: 600px;
+    height: 8px;
+    display: block;
+    margin: 0 auto;
+    background-color: #f1f3f2;
+    border-radius: 5px;
+    overflow-y: hidden; }
+  .testimonial input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 115px;
+    height: 8px;
+    border-radius: 5px;
+    background: #f9804b;
+    cursor: pointer; }
+  .testimonial .btn {
+    margin-top: 30px; }

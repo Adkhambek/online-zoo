@@ -252,3 +252,103 @@
         }
     }
 }
+
+.testimonial {
+    padding: {
+        top: 150px;
+        bottom: 180px;
+    }
+    position: relative;
+
+    &__pattern {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    &__title {
+        font-size: 36px;
+        font-weight: normal;
+        text-align: center;
+        margin-bottom: 47px;
+    }
+
+    &__list {
+        @include flex(flex-start, space-between);
+        margin-bottom: 20px;
+    }
+
+    &__item {
+        color: $gray;
+        width: calc((#{$container-width} - #{$gap} * 3) / 4);
+        border-radius: 20px;
+        padding: 15px;
+        background-color: $light-gray;
+        position: relative;
+    }
+
+    &__item::before {
+        content: "";
+        @include pink_border;
+        border-radius: 20px;
+        top: -2px;
+        left: -2px;
+        bottom: -2px;
+        right: -2px;
+        position: absolute;
+        z-index: -1;
+    }
+
+    &__header {
+        @include flex(center);
+        margin-bottom: 10px;
+    }
+
+    &__profile {
+        margin-right: 10px;
+        border-radius: 50%;
+        width: 37px;
+        height: 37px;
+    }
+
+    &__name {
+        font-weight: normal;
+        font-size: 16px;
+        color: $black;
+    }
+
+    &__location-date {
+        color: $smoke-gray;
+    }
+
+    &__message {
+        height: 310px;
+        overflow-y: hidden;
+        line-height: 120%;
+    }
+
+    input[type="range"] {
+        appearance: none;
+        width: 600px;
+        height: 8px;
+        display: block;
+        margin: 0 auto;
+        background-color: $light-gray;
+        border-radius: 5px;
+        overflow-y: hidden;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 115px;
+        height: 8px;
+        border-radius: 5px;
+        background: $color-secondary;
+        cursor: pointer;
+    }
+
+    .btn {
+        margin-top: 30px;
+    }
+}
