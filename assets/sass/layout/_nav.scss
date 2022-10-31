@@ -6,6 +6,10 @@
         margin-right: 58px;
     }
 
+    &__link:hover {
+        color: $color-secondary;
+    }
+
     .active {
         color: $color-secondary;
     }

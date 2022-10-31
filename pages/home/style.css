@@ -161,6 +161,8 @@ h1 {
     padding: 14px 0; }
   .header__copyright {
     margin-left: auto; }
+  .header__copyright:hover {
+    color: #f9804b; }
   .header .bamboo {
     position: absolute;
     bottom: 5px;
@@ -173,6 +175,9 @@ h1 {
 
 .nav__item:not(:last-child) {
   margin-right: 58px; }
+
+.nav__link:hover {
+  color: #f9804b; }
 
 .nav .active {
   color: #f9804b; }

@@ -11,6 +11,10 @@
         margin-left: auto;
     }
 
+    &__copyright:hover {
+        color: $color-secondary;
+    }
+
     .bamboo {
         position: absolute;
         bottom: 5px;
