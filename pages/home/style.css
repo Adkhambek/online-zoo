@@ -361,7 +361,7 @@ h1 {
     align-items: center;
     justify-content: space-between; }
   .pet figure:hover img {
-    transform: scale(1.5);
+    transform: scale(1.1);
     transition: 0.5s ease-in; }
   .pet figure:hover figcaption {
     justify-content: center;
