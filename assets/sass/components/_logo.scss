@@ -7,11 +7,14 @@
     margin-right: 63px;
     position: relative;
 
-    h1 {
+    &__title {
         text-align: center;
+        font-size: 19px !important;
+        font-weight: normal !important;
+        margin: 0 !important;
     }
 
-    img {
+    &__image {
         position: absolute;
         bottom: 5px;
         left: 10px;

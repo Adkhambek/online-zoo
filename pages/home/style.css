@@ -26,6 +26,27 @@ input {
 
 @font-face {
   font-family: "Roboto";
+  src: url("../../assets/fonts/Roboto-Black.woff2") format("woff2"), url("../../assets/fonts/Roboto-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../../assets/fonts/Roboto-Medium.woff2") format("woff2"), url("../../assets/fonts/Roboto-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../../assets/fonts/Roboto-Thin.woff2") format("woff2"), url("../../assets/fonts/Roboto-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: "Roboto";
   src: url("../../assets/fonts/Roboto-Regular.woff2") format("woff2"), url("../../assets/fonts/Roboto-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
@@ -40,30 +61,20 @@ input {
 
 @font-face {
   font-family: "Roboto";
-  src: url("../../assets/fonts/Roboto-Medium.woff2") format("woff2"), url("../../assets/fonts/Roboto-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap; }
-
-@font-face {
-  font-family: "Roboto";
   src: url("../../assets/fonts/Roboto-Bold.woff2") format("woff2"), url("../../assets/fonts/Roboto-Bold.woff") format("woff");
-  font-weight: bold;
+  font-weight: 700;
   font-style: normal;
   font-display: swap; }
 
 body {
   color: #333b41;
   font-family: "Roboto", sans-serif;
+  font-weight: normal;
   font-size: 16px; }
 
 a {
   text-decoration: none;
   color: inherit; }
-
-h1 {
-  font-size: 19px;
-  font-weight: normal !important; }
 
 .container {
   width: 1160px;
@@ -143,9 +154,12 @@ h1 {
   border-radius: 2px;
   margin-right: 63px;
   position: relative; }
-  .logo h1 {
-    text-align: center; }
-  .logo img {
+  .logo__title {
+    text-align: center;
+    font-size: 19px !important;
+    font-weight: normal !important;
+    margin: 0 !important; }
+  .logo__image {
     position: absolute;
     bottom: 5px;
     left: 10px; }
@@ -195,14 +209,16 @@ h1 {
     margin-top: 68px;
     margin-bottom: 44px; }
   .footer nav {
-    align-self: flex-end; }
+    align-self: flex-end;
+    font-weight: normal; }
   .footer__right {
     align-self: stretch;
     display: flex;
     flex-direction: column;
     justify-content: space-between; }
   .footer .author {
-    align-self: flex-end; }
+    align-self: flex-end;
+    font-weight: 100; }
   .footer .designer {
     margin-bottom: 10px; }
   .footer h3 {
@@ -322,8 +338,10 @@ h1 {
       font-weight: normal;
       font-size: 24px;
       margin: 54px 0 34px; }
-    .backstage__text-box p {
-      line-height: 20px; }
+    .backstage__text-box p:first-child {
+      line-height: 130%; }
+    .backstage__text-box p:last-child {
+      line-height: 140%; }
 
 .pets {
   padding: 105px 0 100px;
@@ -356,6 +374,7 @@ h1 {
   position: relative;
   overflow: hidden; }
   .pet figcaption {
+    color: #000000;
     padding: 8px 14px 14px;
     display: flex;
     align-items: center;
@@ -460,13 +479,14 @@ h1 {
   .testimonial__title {
     font-size: 36px;
     font-weight: normal;
+    line-height: 130%;
     text-align: center;
-    margin-bottom: 47px; }
+    margin-bottom: 50px; }
   .testimonial__list {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    margin-bottom: 20px; }
+    margin-bottom: 21px; }
   .testimonial__item {
     color: #767474;
     width: calc((1160px - 30px * 3) / 4);
