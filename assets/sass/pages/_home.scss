@@ -51,16 +51,21 @@
 }
 
 .backstage {
-    padding-top: 140px;
-    position: relative;
+    padding: {
+        top: 140px;
+        bottom: 74px;
+    }
+    overflow: hidden;
     .container {
         @include flex(center, space-between);
+        position: relative;
     }
 
     &__pattern {
         position: absolute;
-        bottom: -90px;
-        right: 0px;
+        transform: translate(100%, 0);
+        bottom: -80px;
+        right: -20px;
     }
 
     &__text-box {
@@ -86,8 +91,8 @@
 }
 
 .pets {
-    padding: 180px 0 100px;
-    position: relative;
+    padding: 105px 0 100px;
+    overflow: hidden;
     .container {
         position: relative;
     }
@@ -107,12 +112,14 @@
 
     .pattern {
         position: absolute;
-        bottom: 0;
+        bottom: -100px;
         &_first {
-            left: 0;
+            transform: translateX(-80%);
+            left: -100px;
         }
         &_second {
-            right: 0;
+            transform: translateX(50%);
+            right: -40px;
         }
     }
 }
@@ -259,12 +266,16 @@
         top: 150px;
         bottom: 180px;
     }
-    position: relative;
+
+    .container {
+        position: relative;
+    }
 
     &__pattern {
         position: absolute;
-        bottom: -150px;
-        right: -150px;
+        transform: translate(100%, 100%);
+        bottom: 80px;
+        right: 30px;
     }
 
     &__title {

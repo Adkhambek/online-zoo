@@ -299,15 +299,18 @@ h1 {
 
 .backstage {
   padding-top: 140px;
-  position: relative; }
+  padding-bottom: 74px;
+  overflow: hidden; }
   .backstage .container {
     display: flex;
     align-items: center;
-    justify-content: space-between; }
+    justify-content: space-between;
+    position: relative; }
   .backstage__pattern {
     position: absolute;
-    bottom: -90px;
-    right: 0px; }
+    transform: translate(100%, 0);
+    bottom: -80px;
+    right: -20px; }
   .backstage__text-box {
     width: 465px; }
     .backstage__text-box h2 {
@@ -323,8 +326,8 @@ h1 {
       line-height: 20px; }
 
 .pets {
-  padding: 180px 0 100px;
-  position: relative; }
+  padding: 105px 0 100px;
+  overflow: hidden; }
   .pets .container {
     position: relative; }
   .pets__list {
@@ -339,11 +342,13 @@ h1 {
     margin: 0 auto; }
   .pets .pattern {
     position: absolute;
-    bottom: 0; }
+    bottom: -100px; }
     .pets .pattern_first {
-      left: 0; }
+      transform: translateX(-80%);
+      left: -100px; }
     .pets .pattern_second {
-      right: 0; }
+      transform: translateX(50%);
+      right: -40px; }
 
 .pet {
   border: 1px solid #fe9013;
@@ -444,12 +449,14 @@ h1 {
 .testimonial {
   overflow: hidden;
   padding-top: 150px;
-  padding-bottom: 180px;
-  position: relative; }
+  padding-bottom: 180px; }
+  .testimonial .container {
+    position: relative; }
   .testimonial__pattern {
     position: absolute;
-    bottom: -150px;
-    right: -150px; }
+    transform: translate(100%, 100%);
+    bottom: 80px;
+    right: 30px; }
   .testimonial__title {
     font-size: 36px;
     font-weight: normal;
