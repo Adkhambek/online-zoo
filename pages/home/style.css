@@ -94,15 +94,17 @@ a {
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
-  background-color: #f9804b;
+  background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
   color: #ffffff;
   width: 298px;
   height: 54px; }
 
 .btn:hover {
+  background-image: none;
   background-color: #e47209; }
 
 .btn:active {
+  background-image: none;
   background-color: #4b9200; }
 
 .btn_pill {
@@ -116,12 +118,14 @@ a {
   height: 62px;
   border-radius: 50%;
   font-size: 20px;
-  background-color: #f9804b;
+  background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
   color: #ffffff;
   position: absolute; }
   .slide-btn:hover {
+    background-image: none;
     background-color: #e47209; }
   .slide-btn:active {
+    background-image: none;
     background-color: #4b9200; }
   .slide-btn_prev {
     bottom: 50%;

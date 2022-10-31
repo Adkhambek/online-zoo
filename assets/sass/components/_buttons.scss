@@ -4,17 +4,23 @@
     &:visited {
         @include flex(center, center);
         text-transform: uppercase;
-        background-color: $color-secondary;
+        background: linear-gradient(
+            113.96deg,
+            $color-secondary 1.49%,
+            $color-border 101.44%
+        );
         color: $white;
         width: 298px;
         height: 54px;
     }
 
     &:hover {
+        background-image: none;
         background-color: $dark-orange;
     }
 
     &:active {
+        background-image: none;
         background-color: $green;
     }
 
@@ -32,15 +38,21 @@
     height: 62px;
     border-radius: 50%;
     font-size: 20px;
-    background-color: $color-secondary;
+    background: linear-gradient(
+        113.96deg,
+        $color-secondary 1.49%,
+        $color-border 101.44%
+    );
     color: $white;
     position: absolute;
 
     &:hover {
+        background-image: none;
         background-color: $dark-orange;
     }
 
     &:active {
+        background-image: none;
         background-color: $green;
     }
 
