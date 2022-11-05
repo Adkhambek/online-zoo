@@ -279,3 +279,10 @@ a {
   align-items: center;
   justify-content: center;
   background-color: rgba(189, 189, 189, 0.5); }
+
+.banner {
+  height: 390px;
+  background-image: url("../../assets/images/banner.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
