@@ -7,3 +7,24 @@
         repeat: no-repeat;
     }
 }
+
+.main {
+    @include orange-gradient;
+}
+
+.help {
+    padding: 40px 0;
+    color: $white;
+
+    &__title {
+        text-transform: uppercase;
+        font-weight: normal;
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    &__description {
+        line-height: 22px;
+        font-weight: 500;
+    }
+}
