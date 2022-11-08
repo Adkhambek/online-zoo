@@ -27,7 +27,9 @@
                 <nav class="nav" aria-label="header nav">
                     <ul class="nav__list">
                         <li class="nav__item">
-                            <a href="#" class="nav__link">About</a>
+                            <a href="/online-zoo/pages/home" class="nav__link"
+                                >About</a
+                            >
                         </li>
                         <li class="nav__item">
                             <a href="#" class="nav__link">Map</a>
@@ -122,7 +124,9 @@
                                         >
                                     </button>
                                 </li>
-                                <li class="feed__plan-item">
+                                <li
+                                    class="feed__plan-item feed__plan-item_active"
+                                >
                                     <button
                                         class="feed__plan-btn"
                                         aria-label="yellow dot button"
@@ -190,12 +194,12 @@
                                 </li>
                             </ul>
                             <label class="feed__plan-amount-input">
-                                <p>$</p>
                                 <input
                                     type="number"
                                     placeholder="Another amount"
                                     maxlength="4"
                                 />
+                                <p>$</p>
                             </label>
                             <div class="feed__plan-type">
                                 <label>
@@ -216,7 +220,7 @@
                                     <p>Once</p>
                                 </label>
                             </div>
-                            <button type="button" class="btn btn_rounded">
+                            <button type="button" class="btn btn_pill">
                                 Feed a friend now
                             </button>
                             <p>Share with your friends on social networks</p>

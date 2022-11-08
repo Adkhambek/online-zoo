@@ -127,6 +127,38 @@
 
         &-item {
             position: relative;
+
+            &_active {
+                .yellow-dot::after {
+                    content: "";
+                    width: 40px;
+                    height: 40px;
+                    position: absolute;
+                    bottom: 50%;
+                    left: 50%;
+                    transform: translate(-50%, 50%);
+                    border: 1px solid $color-secondary;
+                    border-radius: 50%;
+                    background-color: transparent;
+                }
+
+                button::after {
+                    content: "";
+                    width: 22px;
+                    height: 22px;
+                    position: absolute;
+                    border: 1px solid $color-secondary;
+                    border-radius: 50%;
+                    background-color: transparent;
+                    bottom: 50%;
+                    left: 50%;
+                    transform: translate(-50%, 50%);
+                }
+
+                .feed__plan-amount {
+                    color: $color-secondary;
+                }
+            }
         }
 
         &-btn {
@@ -206,8 +238,17 @@
                 border-radius: 2px;
                 width: 268px;
                 color: $gray-secondary;
+                outline: none;
                 font-size: 16px;
                 font-weight: normal;
+            }
+
+            input:focus {
+                border: 1px solid $green;
+            }
+
+            input:focus + p {
+                color: $green !important;
             }
 
             input::-webkit-outer-spin-button,
@@ -234,32 +275,19 @@
                 margin-right: 10px;
             }
 
-            input[type="radio"]:after {
+            input[type="radio"] {
+                appearance: none;
+                -webkit-appearance: none;
+                outline: 1px solid #fe9013;
+                background-color: transparent;
+                border-radius: 50%;
                 width: 16px;
                 height: 16px;
-                border-radius: 16px;
-                top: -2px;
-                left: -1px;
-                position: relative;
-                @include frosted_glass_white;
-                content: "";
-                display: inline-block;
-                visibility: visible;
                 border: 2px solid $color-secondary;
             }
 
-            input[type="radio"]:checked:after {
-                width: 16px;
-                height: 16px;
-                border-radius: 16px;
-                top: -2px;
-                left: -1px;
-                position: relative;
-                background-color: $color-secondary;
-                content: "";
-                display: inline-block;
-                visibility: visible;
-                border: 2px solid $color-secondary;
+            input[type="radio"]:checked {
+                background-color: #fe9013;
             }
         }
 

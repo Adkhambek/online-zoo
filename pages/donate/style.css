@@ -374,6 +374,30 @@ a {
       justify-content: space-between; }
     .feed__plan-item {
       position: relative; }
+      .feed__plan-item_active .yellow-dot::after {
+        content: "";
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        bottom: 50%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        border: 1px solid #f9804b;
+        border-radius: 50%;
+        background-color: transparent; }
+      .feed__plan-item_active button::after {
+        content: "";
+        width: 22px;
+        height: 22px;
+        position: absolute;
+        border: 1px solid #f9804b;
+        border-radius: 50%;
+        background-color: transparent;
+        bottom: 50%;
+        left: 50%;
+        transform: translate(-50%, 50%); }
+      .feed__plan-item_active .feed__plan-amount {
+        color: #f9804b; }
     .feed__plan-btn {
       cursor: pointer;
       position: absolute;
@@ -437,8 +461,13 @@ a {
         border-radius: 2px;
         width: 268px;
         color: #929699;
+        outline: none;
         font-size: 16px;
         font-weight: normal; }
+      .feed__plan-amount-input input:focus {
+        border: 1px solid #4b9200; }
+      .feed__plan-amount-input input:focus + p {
+        color: #4b9200 !important; }
       .feed__plan-amount-input input::-webkit-outer-spin-button,
       .feed__plan-amount-input input::-webkit-inner-spin-button {
         -webkit-appearance: none;
@@ -453,30 +482,16 @@ a {
         margin-right: 50px; }
       .feed__plan-type input {
         margin-right: 10px; }
-      .feed__plan-type input[type="radio"]:after {
+      .feed__plan-type input[type="radio"] {
+        appearance: none;
+        -webkit-appearance: none;
+        outline: 1px solid #fe9013;
+        background-color: transparent;
+        border-radius: 50%;
         width: 16px;
         height: 16px;
-        border-radius: 16px;
-        top: -2px;
-        left: -1px;
-        position: relative;
-        background: rgba(253, 253, 255, 0.52);
-        backdrop-filter: blur(2px);
-        content: "";
-        display: inline-block;
-        visibility: visible;
         border: 2px solid #f9804b; }
-      .feed__plan-type input[type="radio"]:checked:after {
-        width: 16px;
-        height: 16px;
-        border-radius: 16px;
-        top: -2px;
-        left: -1px;
-        position: relative;
-        background-color: #f9804b;
-        content: "";
-        display: inline-block;
-        visibility: visible;
-        border: 2px solid #f9804b; }
+      .feed__plan-type input[type="radio"]:checked {
+        background-color: #fe9013; }
     .feed__plan .btn {
       margin-bottom: 32px; }
