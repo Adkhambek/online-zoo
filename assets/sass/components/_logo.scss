@@ -20,3 +20,23 @@
         left: 10px;
     }
 }
+
+.header .logo {
+    @include responsive(tab) {
+        width: 46px;
+        height: auto;
+        border: none;
+        margin: 0;
+    }
+    &__title {
+        @include responsive(tab) {
+            font-size: 12px !important;
+        }
+    }
+
+    &__image {
+        height: 13px;
+        bottom: 2px;
+        left: 5px;
+    }
+}

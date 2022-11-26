@@ -7,6 +7,9 @@
         @include responsive(sm-desktop) {
             margin-right: 48px;
         }
+        @include responsive(tab) {
+            margin-right: 40px;
+        }
     }
 
     &__link:hover {
@@ -15,5 +18,11 @@
 
     .active {
         color: $color-secondary;
+    }
+}
+
+.header .nav {
+    @include responsive(tab) {
+        display: none;
     }
 }

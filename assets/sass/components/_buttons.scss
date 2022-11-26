@@ -63,12 +63,18 @@
         @include responsive(sm-desktop) {
             left: 320px;
         }
+        @include responsive(tab) {
+            left: 220px;
+        }
     }
 
     &_next {
         right: -80px;
         @include responsive(sm-desktop) {
             right: 320px;
+        }
+        @include responsive(tab) {
+            right: 220px;
         }
     }
 }
@@ -85,5 +91,20 @@
     &:active {
         color: $green;
         border: 1px solid $green;
+    }
+}
+
+.menu-btn {
+    @include responsive(tab) {
+        display: inline-block;
+    }
+    background-color: transparent;
+    color: $white;
+    font-size: 18px;
+}
+
+.feed-button {
+    @include responsive(tab) {
+        width: 240px !important;
     }
 }

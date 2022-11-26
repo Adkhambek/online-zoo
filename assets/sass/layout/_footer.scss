@@ -5,18 +5,33 @@
         top: 40px;
         bottom: 50px;
     }
+    .container {
+        position: relative;
+    }
+    @include responsive(tab) {
+        padding: 13px 0;
+    }
 
     &__top {
         margin-bottom: 44px;
         @include flex(flex-start, space-between);
+        @include responsive(tab) {
+            margin-bottom: 67px;
+        }
     }
 
     &__bottom {
         @include flex(flex-end, flex-start);
+        @include responsive(tab) {
+            @include flex(flex-end, space-between);
+        }
     }
 
     .logo {
         margin-bottom: 68px;
+        @include responsive(tab) {
+            margin-bottom: 32px;
+        }
     }
 
     .social-list {
@@ -24,10 +39,36 @@
         @include responsive(sm-desktop) {
             margin-right: 180px;
         }
+        @include responsive(tab) {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 0;
+        }
+    }
+
+    .social-item {
+        @include responsive(tab) {
+            margin-bottom: 20px;
+        }
+        p {
+            @include responsive(tab) {
+                display: none;
+            }
+        }
+    }
+
+    .social-box {
+        @include responsive(tab) {
+            margin: 0;
+        }
     }
 
     .subscription {
         margin-right: 33px;
+        @include responsive(tab) {
+            display: none;
+        }
     }
 
     nav {
@@ -39,6 +80,9 @@
         margin-left: 160px;
         @include responsive(sm-desktop) {
             margin-left: 85px;
+        }
+        @include responsive(tab) {
+            margin: 0;
         }
     }
 

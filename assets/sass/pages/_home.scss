@@ -18,6 +18,12 @@
         }
         overflow-y: hidden;
     }
+    @include responsive(tab) {
+        padding: {
+            top: 48px;
+            bottom: 38px;
+        }
+    }
 
     .container {
         @include flex(center, flex-end);
@@ -26,6 +32,9 @@
     &__box {
         text-align: center;
         width: 500px;
+        @include responsive(tab) {
+            width: 100%;
+        }
     }
 
     &__title {
@@ -37,6 +46,12 @@
         @include responsive(sm-desktop) {
             font-size: 85px;
             margin-bottom: 40px;
+        }
+        @include responsive(tab) {
+            font-size: 54px;
+            margin-bottom: 0;
+            width: 255px;
+            margin-left: auto;
         }
     }
 
@@ -55,6 +70,12 @@
             height: 367px;
             left: -20px;
         }
+        @include responsive(tab) {
+            width: 237px;
+            height: 237px;
+            left: -30px;
+            bottom: -3px;
+        }
     }
 
     .yellow {
@@ -63,6 +84,10 @@
 
     .btn {
         margin: 0 auto;
+        @include responsive(tab) {
+            margin-left: 0;
+            margin-right: auto;
+        }
     }
 }
 
@@ -76,6 +101,12 @@
         padding: {
             top: 100px;
             bottom: 142px;
+        }
+    }
+    @include responsive(tab) {
+        padding: {
+            top: 60px;
+            bottom: 60px;
         }
     }
 
@@ -93,12 +124,21 @@
         @include responsive(sm-desktop) {
             display: none;
         }
+        @include responsive(tab) {
+            height: 476px;
+            display: inline-block;
+            bottom: -40px;
+            right: 100px;
+        }
     }
     &__image {
         @include responsive(sm-desktop) {
             width: 455px;
             height: 408px;
             object-fit: cover;
+        }
+        @include responsive(tab) {
+            display: none;
         }
     }
 
@@ -118,6 +158,9 @@
             font-weight: normal;
             font-size: 24px;
             margin: 54px 0 34px;
+            @include responsive(tab) {
+                margin: 30px 0 20px;
+            }
         }
 
         p:first-child {
@@ -138,6 +181,12 @@
             bottom: 140px;
         }
     }
+    @include responsive(tab) {
+        padding: {
+            top: 0;
+            bottom: 100px;
+        }
+    }
     overflow: hidden;
     .container {
         position: relative;
@@ -150,9 +199,16 @@
         column-gap: $gap;
         row-gap: calc(#{$gap} - 10px);
         margin-bottom: 80px;
+        @include responsive(tab) {
+            margin-bottom: 58px;
+        }
         @include responsive(sm-desktop) {
             grid-template-columns: repeat(4, 294px);
+            column-gap: 29px;
             row-gap: 92px;
+        }
+        @include responsive(tab) {
+            grid-template-columns: repeat(4, 285px);
         }
     }
 
@@ -166,12 +222,19 @@
         @include responsive(sm-desktop) {
             bottom: -140px;
         }
+        @include responsive(tab) {
+            bottom: -100px;
+        }
         &_first {
             transform: translateX(-80%);
             left: -100px;
             @include responsive(sm-desktop) {
                 width: 386px;
                 left: 100px;
+            }
+            @include responsive(tab) {
+                width: 385px;
+                left: 40px;
             }
         }
         &_second {
@@ -180,6 +243,9 @@
             @include responsive(sm-desktop) {
                 width: 241px;
                 transform: none;
+            }
+            @include responsive(sm-desktop) {
+                width: 175px;
             }
         }
     }
@@ -194,12 +260,18 @@
         color: $black;
         padding: 8px 14px 14px;
         @include flex(center, space-between);
+        @include responsive(tab) {
+            padding: 6px 12px 10px;
+        }
     }
 
     figure {
         &:hover img {
             transform: scale(1.1);
             transition: 0.5s ease-in;
+            @include responsive(tab) {
+                height: 285px;
+            }
         }
         &:hover figcaption {
             justify-content: center;
@@ -222,10 +294,22 @@
         font-size: 16px;
         font-weight: 500;
         text-transform: uppercase;
+        @include responsive(tab) {
+            font-size: 12px;
+        }
     }
 
     &__native {
         font-size: 15px;
+        @include responsive(tab) {
+            font-size: 11px;
+        }
+    }
+
+    &__food {
+        @include responsive(tab) {
+            height: 29px;
+        }
     }
 }
 
@@ -237,11 +321,18 @@
         bottom: 100px;
     }
 
+    .container {
+        width: 100%;
+    }
+
     @include responsive(sm-desktop) {
         padding: {
             top: 30px;
             bottom: 50px;
         }
+    }
+    @include responsive(tab) {
+        padding: 20px 0;
     }
 
     &__box {
@@ -261,6 +352,9 @@
                 left: 48px;
             }
         }
+        @include responsive(tab) {
+            padding: 10px 20px 60px;
+        }
     }
 
     &__title {
@@ -268,6 +362,9 @@
         font-weight: normal;
         color: $color-secondary;
         font-size: 48px;
+        @include responsive(tab) {
+            font-size: 42px;
+        }
     }
 
     &__subtitle {
@@ -278,6 +375,9 @@
         }
         @include responsive(sm-desktop) {
             margin: 20px 0;
+        }
+        @include responsive(tab) {
+            font-size: 22px;
         }
     }
 
@@ -302,6 +402,9 @@
         @include responsive(sm-desktop) {
             margin: 50px 0 40px;
         }
+        @include responsive(tab) {
+            margin: 30px 0 23px;
+        }
     }
 
     &__list {
@@ -318,12 +421,15 @@
         height: 168px;
         @include flex(center, center);
         border: 1px solid $color-secondary;
-        margin-bottom: 30px;
+        margin-bottom: 34px;
     }
 
     &__item:not(:last-child) {
         position: relative;
         margin-right: 130px;
+        @include responsive(tab) {
+            margin-right: 42px;
+        }
     }
 
     &__item:not(:last-child):after {
@@ -332,6 +438,12 @@
         right: -40%;
         transform: translateX(50%);
         content: url("../../assets/icons/next.svg");
+        @include responsive(tab) {
+            content: url("../../assets/icons/next-2.png");
+            top: -17px;
+            right: -13px;
+            z-index: 1;
+        }
     }
 
     .btn {
@@ -342,6 +454,9 @@
         }
         @include responsive(sm-desktop) {
             margin-top: 70px;
+        }
+        @include responsive(tab) {
+            margin-top: 44px;
         }
     }
 }
@@ -358,6 +473,12 @@
             bottom: 140px;
         }
     }
+    @include responsive(tab) {
+        padding: {
+            top: 60px;
+            bottom: 80px;
+        }
+    }
 
     .container {
         position: relative;
@@ -372,6 +493,11 @@
             width: 300px;
             right: 160px;
             bottom: 90px;
+        }
+        @include responsive(tab) {
+            width: 200px;
+            right: 90px;
+            bottom: 60px;
         }
     }
 
@@ -394,6 +520,11 @@
         @include responsive(sm-desktop) {
             grid-template-columns: repeat(4, 293px);
         }
+        @include responsive(tab) {
+            grid-template-columns: 1fr;
+            row-gap: 15px;
+            margin-bottom: 40px;
+        }
         column-gap: $gap;
     }
 
@@ -402,7 +533,16 @@
         border: 1px solid $color-border;
         border-radius: 20px;
         padding: 15px;
+        @include responsive(tab) {
+            padding: 15px 29px 8px 12px;
+        }
         background-color: $light-gray;
+    }
+
+    &__item:last-child {
+        @include responsive(tab) {
+            display: none;
+        }
     }
 
     &__header {
@@ -431,6 +571,11 @@
         height: 310px;
         overflow-y: hidden;
         line-height: 120%;
+        @include responsive(tab) {
+            max-height: 38px;
+            overflow-y: hidden;
+            margin-left: 6px;
+        }
     }
 
     input[type="range"] {
@@ -438,6 +583,9 @@
         width: 600px;
         @include responsive(sm-desktop) {
             width: 390px;
+        }
+        @include responsive(tab) {
+            display: none;
         }
         height: 8px;
         display: block;
@@ -464,6 +612,9 @@
         margin-top: 30px;
         @include responsive(sm-desktop) {
             margin-top: 52px;
+        }
+        @include responsive(tab) {
+            margin: 0 auto;
         }
     }
 }
