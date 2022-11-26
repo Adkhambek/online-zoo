@@ -6,32 +6,40 @@
         bottom: 50px;
     }
 
-    .container {
+    &__top {
+        margin-bottom: 44px;
         @include flex(flex-start, space-between);
     }
 
-    .btn {
-        margin: {
-            top: 68px;
-            bottom: 44px;
+    &__bottom {
+        @include flex(flex-end, flex-start);
+    }
+
+    .logo {
+        margin-bottom: 68px;
+    }
+
+    .social-list {
+        margin-right: 289px;
+        @include responsive(sm-desktop) {
+            margin-right: 180px;
         }
     }
 
+    .subscription {
+        margin-right: 33px;
+    }
+
     nav {
-        align-self: flex-end;
         font-weight: normal;
     }
 
-    &__right {
-        align-self: stretch;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
     .author {
-        align-self: flex-end;
         font-weight: 100;
+        margin-left: 160px;
+        @include responsive(sm-desktop) {
+            margin-left: 85px;
+        }
     }
 
     .designer {

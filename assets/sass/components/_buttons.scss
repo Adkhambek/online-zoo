@@ -45,6 +45,8 @@
     );
     color: $white;
     position: absolute;
+    bottom: 50%;
+    transform: translateY(-50%);
 
     &:hover {
         background-image: none;
@@ -57,15 +59,17 @@
     }
 
     &_prev {
-        bottom: 50%;
-        transform: translateY(-50%);
         left: -80px;
+        @include responsive(sm-desktop) {
+            left: 320px;
+        }
     }
 
     &_next {
-        bottom: 50%;
-        transform: translateY(-50%);
         right: -80px;
+        @include responsive(sm-desktop) {
+            right: 320px;
+        }
     }
 }
 

@@ -52,3 +52,21 @@
     background: rgba(253, 253, 255, 0.52);
     backdrop-filter: blur(2px);
 }
+
+@mixin responsive($breakpoint) {
+    @if $breakpoint == phone {
+        @media (max-width: 320px) {
+            @content;
+        }
+    }
+    @if $breakpoint == tab {
+        @media (max-width: 640px) {
+            @content;
+        }
+    }
+    @if $breakpoint == sm-desktop {
+        @media (max-width: 1000px) {
+            @content;
+        }
+    }
+}

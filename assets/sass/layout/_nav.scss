@@ -4,6 +4,9 @@
     }
     &__item:not(:last-child) {
         margin-right: 58px;
+        @include responsive(sm-desktop) {
+            margin-right: 48px;
+        }
     }
 
     &__link:hover {

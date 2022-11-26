@@ -11,6 +11,13 @@
         top: 86px;
         bottom: 100px;
     }
+    @include responsive(sm-desktop) {
+        padding: {
+            top: 42px;
+            bottom: 47px;
+        }
+        overflow-y: hidden;
+    }
 
     .container {
         @include flex(center, flex-end);
@@ -27,6 +34,10 @@
         line-height: 75%;
         margin-bottom: 60px;
         z-index: 1;
+        @include responsive(sm-desktop) {
+            font-size: 85px;
+            margin-bottom: 40px;
+        }
     }
 
     .circle {
@@ -39,6 +50,11 @@
         left: -73px;
         bottom: 10px;
         z-index: -1;
+        @include responsive(sm-desktop) {
+            width: 367px;
+            height: 367px;
+            left: -20px;
+        }
     }
 
     .yellow {
@@ -55,6 +71,14 @@
         top: 140px;
         bottom: 74px;
     }
+
+    @include responsive(sm-desktop) {
+        padding: {
+            top: 100px;
+            bottom: 142px;
+        }
+    }
+
     overflow: hidden;
     .container {
         @include flex(center, space-between);
@@ -66,11 +90,23 @@
         transform: translate(100%, 0);
         bottom: -80px;
         right: -20px;
+        @include responsive(sm-desktop) {
+            display: none;
+        }
+    }
+    &__image {
+        @include responsive(sm-desktop) {
+            width: 455px;
+            height: 408px;
+            object-fit: cover;
+        }
     }
 
     &__text-box {
         width: 465px;
-
+        @include responsive(sm-desktop) {
+            width: 454px;
+        }
         h2 {
             font-weight: normal;
             font-size: 48px;
@@ -96,6 +132,12 @@
 
 .pets {
     padding: 105px 0 100px;
+    @include responsive(sm-desktop) {
+        padding: {
+            top: 0;
+            bottom: 140px;
+        }
+    }
     overflow: hidden;
     .container {
         position: relative;
@@ -108,6 +150,10 @@
         column-gap: $gap;
         row-gap: calc(#{$gap} - 10px);
         margin-bottom: 80px;
+        @include responsive(sm-desktop) {
+            grid-template-columns: repeat(4, 294px);
+            row-gap: 92px;
+        }
     }
 
     .btn {
@@ -117,13 +163,24 @@
     .pattern {
         position: absolute;
         bottom: -100px;
+        @include responsive(sm-desktop) {
+            bottom: -140px;
+        }
         &_first {
             transform: translateX(-80%);
             left: -100px;
+            @include responsive(sm-desktop) {
+                width: 386px;
+                left: 100px;
+            }
         }
         &_second {
             transform: translateX(50%);
             right: -40px;
+            @include responsive(sm-desktop) {
+                width: 241px;
+                transform: none;
+            }
         }
     }
 }
@@ -180,6 +237,13 @@
         bottom: 100px;
     }
 
+    @include responsive(sm-desktop) {
+        padding: {
+            top: 30px;
+            bottom: 50px;
+        }
+    }
+
     &__box {
         @include frosted_glass_white;
         border-radius: 20px;
@@ -188,6 +252,14 @@
             bottom: 60px;
             right: 60px;
             left: 100px;
+        }
+        @include responsive(sm-desktop) {
+            padding: {
+                top: 30px;
+                bottom: 50px;
+                right: 49px;
+                left: 48px;
+            }
         }
     }
 
@@ -203,6 +275,9 @@
         margin: {
             top: 30px;
             bottom: 40px;
+        }
+        @include responsive(sm-desktop) {
+            margin: 20px 0;
         }
     }
 
@@ -223,6 +298,9 @@
             top: 60px;
             bottom: 40px;
             font-size: 36px;
+        }
+        @include responsive(sm-desktop) {
+            margin: 50px 0 40px;
         }
     }
 
@@ -262,6 +340,9 @@
             right: auto;
             left: auto;
         }
+        @include responsive(sm-desktop) {
+            margin-top: 70px;
+        }
     }
 }
 
@@ -270,6 +351,12 @@
     padding: {
         top: 150px;
         bottom: 180px;
+    }
+    @include responsive(sm-desktop) {
+        padding: {
+            top: 110px;
+            bottom: 140px;
+        }
     }
 
     .container {
@@ -281,6 +368,11 @@
         transform: translate(100%, 100%);
         bottom: 80px;
         right: 30px;
+        @include responsive(sm-desktop) {
+            width: 300px;
+            right: 160px;
+            bottom: 90px;
+        }
     }
 
     &__title {
@@ -289,32 +381,28 @@
         line-height: 130%;
         text-align: center;
         margin-bottom: 50px;
+        @include responsive(sm-desktop) {
+            margin-bottom: 30px;
+        }
     }
 
     &__list {
-        @include flex(flex-start, space-between);
         margin-bottom: 21px;
+        overflow-x: hidden;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        @include responsive(sm-desktop) {
+            grid-template-columns: repeat(4, 293px);
+        }
+        column-gap: $gap;
     }
 
     &__item {
         color: $gray;
-        width: calc((#{$container-width} - #{$gap} * 3) / 4);
+        border: 1px solid $color-border;
         border-radius: 20px;
         padding: 15px;
         background-color: $light-gray;
-        position: relative;
-    }
-
-    &__item::before {
-        content: "";
-        @include pink_border;
-        border-radius: 20px;
-        top: -2px;
-        left: -2px;
-        bottom: -2px;
-        right: -2px;
-        position: absolute;
-        z-index: -1;
     }
 
     &__header {
@@ -348,6 +436,9 @@
     input[type="range"] {
         appearance: none;
         width: 600px;
+        @include responsive(sm-desktop) {
+            width: 390px;
+        }
         height: 8px;
         display: block;
         margin: 0 auto;
@@ -360,6 +451,9 @@
         -webkit-appearance: none;
         appearance: none;
         width: 115px;
+        @include responsive(sm-desktop) {
+            width: 75px;
+        }
         height: 8px;
         border-radius: 5px;
         background: $color-secondary;
@@ -368,5 +462,8 @@
 
     .btn {
         margin-top: 30px;
+        @include responsive(sm-desktop) {
+            margin-top: 52px;
+        }
     }
 }
