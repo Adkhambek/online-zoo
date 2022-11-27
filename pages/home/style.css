@@ -676,11 +676,19 @@ a {
         height: 217px;
         top: -60px;
         right: 20px; } }
+  @media (max-width: 1000px) {
+    .backstage__image {
+      width: 455px;
+      height: 408px;
+      object-fit: cover; } }
   @media (max-width: 999px) {
     .backstage__image {
       display: none; } }
   .backstage__text-box {
     width: 465px; }
+    @media (max-width: 1000px) {
+      .backstage__text-box {
+        width: 454px; } }
     @media (max-width: 319px) {
       .backstage__text-box {
         width: 100%; } }
