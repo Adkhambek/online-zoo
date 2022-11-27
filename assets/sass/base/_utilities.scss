@@ -6,6 +6,9 @@
     @include responsive(tab) {
         width: 600px;
     }
+    @include responsive(phone) {
+        width: 298px;
+    }
     margin: 0 auto;
 }
 

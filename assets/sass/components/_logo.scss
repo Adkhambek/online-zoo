@@ -35,8 +35,25 @@
     }
 
     &__image {
-        height: 13px;
-        bottom: 2px;
-        left: 5px;
+        @include responsive(tab) {
+            height: 13px;
+            bottom: 2px;
+            left: 5px;
+        }
+    }
+}
+
+.footer .logo {
+    @include responsive(phone) {
+        display: inline-block;
+        width: auto;
+        height: auto;
+        border: none;
+    }
+    &__image {
+        @include responsive(phone) {
+            bottom: 5px;
+            left: 74px;
+        }
     }
 }

@@ -7,9 +7,6 @@
         @include responsive(sm-desktop) {
             margin-right: 48px;
         }
-        @include responsive(tab) {
-            margin-right: 40px;
-        }
     }
 
     &__link:hover {
@@ -24,5 +21,16 @@
 .header .nav {
     @include responsive(tab) {
         display: none;
+    }
+}
+
+.footer .nav {
+    &__item:not(:last-child) {
+        @include responsive(tab) {
+            margin-right: 40px;
+        }
+        @include responsive(phone) {
+            margin-right: 30px;
+        }
     }
 }

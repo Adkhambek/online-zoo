@@ -11,12 +11,18 @@
     @include responsive(tab) {
         padding: 13px 0;
     }
+    @include responsive(phone) {
+        padding: 20px 0;
+    }
 
     &__top {
         margin-bottom: 44px;
         @include flex(flex-start, space-between);
         @include responsive(tab) {
             margin-bottom: 67px;
+        }
+        @include responsive(phone) {
+            margin-bottom: 30px;
         }
     }
 
@@ -25,12 +31,24 @@
         @include responsive(tab) {
             @include flex(flex-end, space-between);
         }
+        @include responsive(phone) {
+            flex-direction: column-reverse;
+        }
     }
 
     .logo {
         margin-bottom: 68px;
         @include responsive(tab) {
             margin-bottom: 32px;
+        }
+        @include responsive(phone) {
+            margin: 0 0 86px !important;
+        }
+    }
+
+    &__left {
+        @include responsive(phone) {
+            text-align: center;
         }
     }
 
@@ -45,11 +63,22 @@
             right: 0;
             margin: 0;
         }
+        @include responsive(phone) {
+            top: 50px;
+            right: 50%;
+            transform: translateX(50%);
+            @include flex(center, center);
+        }
     }
 
     .social-item {
         @include responsive(tab) {
             margin-bottom: 20px;
+        }
+        &:not(:last-child) {
+            @include responsive(phone) {
+                margin-right: 30px;
+            }
         }
         p {
             @include responsive(tab) {
@@ -73,6 +102,9 @@
 
     nav {
         font-weight: normal;
+        @include responsive(phone) {
+            align-self: center;
+        }
     }
 
     .author {
@@ -83,6 +115,9 @@
         }
         @include responsive(tab) {
             margin: 0;
+        }
+        @include responsive(phone) {
+            margin-bottom: 30px;
         }
     }
 
