@@ -258,12 +258,10 @@
         column-gap: $gap;
         row-gap: calc(#{$gap} - 10px);
         margin-bottom: 80px;
-        @include responsive(1599) {
-            row-gap: 92px;
-        }
         @include responsive(sm-desktop) {
             grid-template-columns: repeat(4, 294px);
             column-gap: 29px;
+            row-gap: 92px;
         }
         @include responsive(tab) {
             margin-bottom: 58px;
