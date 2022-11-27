@@ -9,6 +9,9 @@
     @include responsive(phone) {
         width: 298px;
     }
+    @include responsive(319) {
+        width: 93%;
+    }
     margin: 0 auto;
 }
 

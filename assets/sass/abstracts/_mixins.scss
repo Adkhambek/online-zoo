@@ -59,6 +59,11 @@
             @content;
         }
     }
+    @if $breakpoint == 319 {
+        @media (max-width: 319px) {
+            @content;
+        }
+    }
     @if $breakpoint == tab {
         @media (max-width: 640px) {
             @content;

@@ -12,6 +12,10 @@
         color: $white;
         width: 298px;
         height: 54px;
+        @include responsive(319) {
+            width: 90%;
+            text-align: center;
+        }
     }
 
     &:hover {
@@ -109,5 +113,9 @@
 .feed-button {
     @include responsive(tab) {
         width: 240px !important;
+    }
+    @include responsive(319) {
+        width: 90% !important;
+        text-align: center;
     }
 }
