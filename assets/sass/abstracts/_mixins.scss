@@ -69,6 +69,11 @@
             @content;
         }
     }
+    @if $breakpoint == 639 {
+        @media (max-width: 639px) {
+            @content;
+        }
+    }
     @if $breakpoint == sm-desktop {
         @media (max-width: 1000px) {
             @content;

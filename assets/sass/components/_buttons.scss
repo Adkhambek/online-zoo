@@ -38,7 +38,7 @@
 }
 
 .slide-btn {
-    @include responsive(phone) {
+    @include responsive(639) {
         display: none;
     }
     width: 62px;

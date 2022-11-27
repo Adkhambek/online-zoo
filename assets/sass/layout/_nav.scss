@@ -29,7 +29,7 @@
         @include responsive(tab) {
             margin-right: 40px;
         }
-        @include responsive(phone) {
+        @include responsive(639) {
             margin-right: 30px;
         }
         @include responsive(319) {

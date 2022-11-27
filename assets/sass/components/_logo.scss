@@ -44,14 +44,14 @@
 }
 
 .footer .logo {
-    @include responsive(phone) {
+    @include responsive(639) {
         display: inline-block;
         width: auto;
         height: auto;
         border: none;
     }
     &__image {
-        @include responsive(phone) {
+        @include responsive(639) {
             bottom: 5px;
             left: 74px;
         }

@@ -11,7 +11,7 @@
     @include responsive(tab) {
         padding: 13px 0;
     }
-    @include responsive(phone) {
+    @include responsive(639) {
         padding: 20px 0;
     }
 
@@ -21,7 +21,7 @@
         @include responsive(tab) {
             margin-bottom: 67px;
         }
-        @include responsive(phone) {
+        @include responsive(639) {
             margin-bottom: 30px;
         }
         @include responsive(319) {
@@ -34,7 +34,7 @@
         @include responsive(tab) {
             @include flex(flex-end, space-between);
         }
-        @include responsive(phone) {
+        @include responsive(639) {
             flex-direction: column-reverse;
         }
         @include responsive(319) {
@@ -48,7 +48,7 @@
         @include responsive(tab) {
             margin-bottom: 32px;
         }
-        @include responsive(phone) {
+        @include responsive(639) {
             margin: 0 0 86px !important;
         }
         @include responsive(319) {
@@ -57,12 +57,13 @@
     }
 
     &__left {
-        @include responsive(phone) {
+        @include responsive(639) {
+            width: 100%;
             text-align: center;
         }
 
         a {
-            @include responsive(319) {
+            @include responsive(639) {
                 margin: 0 auto;
             }
         }
@@ -79,7 +80,7 @@
             right: 0;
             margin: 0;
         }
-        @include responsive(phone) {
+        @include responsive(639) {
             top: 50px;
             right: 50%;
             transform: translateX(50%);
@@ -98,7 +99,7 @@
             margin-bottom: 20px;
         }
         &:not(:last-child) {
-            @include responsive(phone) {
+            @include responsive(639) {
                 margin-right: 30px;
             }
             @include responsive(319) {
@@ -131,7 +132,7 @@
 
     nav {
         font-weight: normal;
-        @include responsive(phone) {
+        @include responsive(639) {
             align-self: center;
         }
         @include responsive(319) {
@@ -148,7 +149,7 @@
         @include responsive(tab) {
             margin: 0;
         }
-        @include responsive(phone) {
+        @include responsive(639) {
             margin-bottom: 30px;
         }
         @include responsive(319) {
