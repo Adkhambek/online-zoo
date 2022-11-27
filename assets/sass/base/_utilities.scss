@@ -1,5 +1,8 @@
 .container {
     width: $container-width;
+    @include responsive(1599) {
+        width: 94%;
+    }
     @include responsive(sm-desktop) {
         width: 940px;
     }

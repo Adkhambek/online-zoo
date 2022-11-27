@@ -84,4 +84,9 @@
             @content;
         }
     }
+    @if $breakpoint == 1599 {
+        @media (max-width: 1599px) {
+            @content;
+        }
+    }
 }

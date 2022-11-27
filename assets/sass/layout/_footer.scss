@@ -31,7 +31,7 @@
 
     &__bottom {
         @include flex(flex-end, flex-start);
-        @include responsive(999) {
+        @include responsive(1599) {
             justify-content: space-between;
         }
         @include responsive(tab) {
@@ -75,6 +75,9 @@
 
     .social-list {
         margin-right: 289px;
+        @include responsive(1599) {
+            margin-right: 0;
+        }
         @include responsive(sm-desktop) {
             margin-right: 180px;
         }
@@ -150,6 +153,9 @@
     .author {
         font-weight: 100;
         margin-left: 160px;
+        @include responsive(1599) {
+            margin: 0;
+        }
         @include responsive(sm-desktop) {
             margin-left: 85px;
         }

@@ -171,7 +171,7 @@
         }
     }
     &__image {
-        @include responsive(sm-desktop) {
+        @include responsive(1599) {
             width: 455px;
             height: 408px;
             object-fit: cover;
@@ -183,7 +183,7 @@
 
     &__text-box {
         width: 465px;
-        @include responsive(sm-desktop) {
+        @include responsive(1599) {
             width: 454px;
         }
         @include responsive(319) {
@@ -257,10 +257,12 @@
         column-gap: $gap;
         row-gap: calc(#{$gap} - 10px);
         margin-bottom: 80px;
+        @include responsive(1599) {
+            row-gap: 92px;
+        }
         @include responsive(sm-desktop) {
             grid-template-columns: repeat(4, 294px);
             column-gap: 29px;
-            row-gap: 92px;
         }
         @include responsive(tab) {
             margin-bottom: 58px;

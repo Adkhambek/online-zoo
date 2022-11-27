@@ -4,6 +4,9 @@
     }
     &__item:not(:last-child) {
         margin-right: 58px;
+        @include responsive(1599) {
+            margin-right: 50px;
+        }
         @include responsive(sm-desktop) {
             margin-right: 48px;
         }

@@ -67,7 +67,7 @@
 
     &_prev {
         left: -80px;
-        @include responsive(sm-desktop) {
+        @include responsive(1599) {
             left: 320px;
         }
         @include responsive(999) {
@@ -77,7 +77,7 @@
 
     &_next {
         right: -80px;
-        @include responsive(sm-desktop) {
+        @include responsive(1599) {
             right: 320px;
         }
         @include responsive(999) {
