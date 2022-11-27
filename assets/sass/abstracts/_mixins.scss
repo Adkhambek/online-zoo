@@ -79,4 +79,9 @@
             @content;
         }
     }
+    @if $breakpoint == 999 {
+        @media (max-width: 999px) {
+            @content;
+        }
+    }
 }

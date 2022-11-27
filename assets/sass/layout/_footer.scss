@@ -31,7 +31,11 @@
 
     &__bottom {
         @include flex(flex-end, flex-start);
+        @include responsive(999) {
+            justify-content: space-between;
+        }
         @include responsive(tab) {
+            justify-content: flex-start;
             @include flex(flex-end, space-between);
         }
         @include responsive(639) {
@@ -73,6 +77,9 @@
         margin-right: 289px;
         @include responsive(sm-desktop) {
             margin-right: 180px;
+        }
+        @include responsive(999) {
+            margin-right: 0;
         }
         @include responsive(tab) {
             position: absolute;
@@ -125,7 +132,7 @@
 
     .subscription {
         margin-right: 33px;
-        @include responsive(tab) {
+        @include responsive(999) {
             display: none;
         }
     }
@@ -146,7 +153,7 @@
         @include responsive(sm-desktop) {
             margin-left: 85px;
         }
-        @include responsive(tab) {
+        @include responsive(999) {
             margin: 0;
         }
         @include responsive(639) {

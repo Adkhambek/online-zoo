@@ -176,7 +176,7 @@
             height: 408px;
             object-fit: cover;
         }
-        @include responsive(tab) {
+        @include responsive(999) {
             display: none;
         }
     }

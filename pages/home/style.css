@@ -82,6 +82,9 @@ a {
   @media (max-width: 1000px) {
     .container {
       width: 940px; } }
+  @media (max-width: 999px) {
+    .container {
+      width: 94%; } }
   @media (max-width: 640px) {
     .container {
       width: 600px; } }
@@ -159,7 +162,7 @@ a {
     @media (max-width: 1000px) {
       .slide-btn_prev {
         left: 320px; } }
-    @media (max-width: 640px) {
+    @media (max-width: 999px) {
       .slide-btn_prev {
         left: 220px; } }
   .slide-btn_next {
@@ -167,7 +170,7 @@ a {
     @media (max-width: 1000px) {
       .slide-btn_next {
         right: 320px; } }
-    @media (max-width: 640px) {
+    @media (max-width: 999px) {
       .slide-btn_next {
         right: 220px; } }
 
@@ -286,6 +289,9 @@ a {
   @media (max-width: 1000px) {
     .nav__item:not(:last-child) {
       margin-right: 48px; } }
+  @media (max-width: 999px) {
+    .nav__item:not(:last-child) {
+      margin-right: 20px; } }
 
 .nav__link:hover {
   color: #f9804b; }
@@ -345,8 +351,12 @@ a {
     display: flex;
     align-items: flex-end;
     justify-content: flex-start; }
+    @media (max-width: 999px) {
+      .footer__bottom {
+        justify-content: space-between; } }
     @media (max-width: 640px) {
       .footer__bottom {
+        justify-content: flex-start;
         display: flex;
         align-items: flex-end;
         justify-content: space-between; } }
@@ -380,6 +390,9 @@ a {
     @media (max-width: 1000px) {
       .footer .social-list {
         margin-right: 180px; } }
+    @media (max-width: 999px) {
+      .footer .social-list {
+        margin-right: 0; } }
     @media (max-width: 640px) {
       .footer .social-list {
         position: absolute;
@@ -421,7 +434,7 @@ a {
       margin: 0; } }
   .footer .subscription {
     margin-right: 33px; }
-    @media (max-width: 640px) {
+    @media (max-width: 999px) {
       .footer .subscription {
         display: none; } }
   .footer nav {
@@ -438,7 +451,7 @@ a {
     @media (max-width: 1000px) {
       .footer .author {
         margin-left: 85px; } }
-    @media (max-width: 640px) {
+    @media (max-width: 999px) {
       .footer .author {
         margin: 0; } }
     @media (max-width: 639px) {
@@ -649,7 +662,7 @@ a {
       width: 455px;
       height: 408px;
       object-fit: cover; } }
-  @media (max-width: 640px) {
+  @media (max-width: 999px) {
     .backstage__image {
       display: none; } }
   .backstage__text-box {

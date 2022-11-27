@@ -3,6 +3,9 @@
     @include responsive(sm-desktop) {
         width: 940px;
     }
+    @include responsive(999) {
+        width: 94%;
+    }
     @include responsive(tab) {
         width: 600px;
     }

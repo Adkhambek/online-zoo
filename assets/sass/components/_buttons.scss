@@ -70,7 +70,7 @@
         @include responsive(sm-desktop) {
             left: 320px;
         }
-        @include responsive(tab) {
+        @include responsive(999) {
             left: 220px;
         }
     }
@@ -80,7 +80,7 @@
         @include responsive(sm-desktop) {
             right: 320px;
         }
-        @include responsive(tab) {
+        @include responsive(999) {
             right: 220px;
         }
     }
