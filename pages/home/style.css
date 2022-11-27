@@ -551,6 +551,7 @@ a {
       overflow-y: hidden; } }
   @media (max-width: 640px) {
     .hero {
+      margin-top: 32px;
       padding-top: 48px;
       padding-bottom: 38px; } }
   @media (max-width: 320px) {
@@ -1031,7 +1032,10 @@ a {
         margin-top: 70px; } }
     @media (max-width: 640px) {
       .feed .btn {
-        margin-top: 44px; } }
+        margin-top: 25px; } }
+    @media (max-width: 320px) {
+      .feed .btn {
+        margin-top: 40px; } }
 
 .testimonial {
   overflow: hidden;

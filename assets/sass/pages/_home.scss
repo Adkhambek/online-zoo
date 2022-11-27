@@ -19,6 +19,7 @@
         overflow-y: hidden;
     }
     @include responsive(tab) {
+        margin-top: 32px;
         padding: {
             top: 48px;
             bottom: 38px;
@@ -617,7 +618,10 @@
             margin-top: 70px;
         }
         @include responsive(tab) {
-            margin-top: 44px;
+            margin-top: 25px;
+        }
+        @include responsive(phone) {
+            margin-top: 40px;
         }
     }
 }
