@@ -4,6 +4,9 @@
         margin-top: 32px;
         height: 335px;
     }
+    @include responsive(phone) {
+        height: 187px;
+    }
     background: {
         image: url("../../assets/images/banner.png");
         size: cover;
@@ -50,14 +53,16 @@
         top: 10px;
         bottom: 180px;
     }
-    @include responsive(tab) {
-        padding: {
-            top: 34px;
-            bottom: 46px !important;
-        }
-    }
+
     @include responsive(sm-desktop) {
         padding-bottom: 30px;
+    }
+    @include responsive(tab) {
+        padding-top: 34px;
+        padding-bottom: 46px;
+    }
+    @include responsive(phone) {
+        padding-bottom: 21px;
     }
     &__title {
         font-size: 36px;
@@ -65,6 +70,9 @@
         margin-bottom: 60px;
         @include responsive(tab) {
             margin-bottom: 30px !important;
+        }
+        @include responsive(phone) {
+            font-size: 24px;
         }
         color: $color-secondary;
         @include responsive(sm-desktop) {
@@ -97,6 +105,14 @@
                 bottom: 30px;
             }
         }
+        @include responsive(phone) {
+            padding: {
+                top: 20px;
+                right: 0;
+                left: 0;
+                bottom: 19px;
+            }
+        }
         color: $black;
 
         &-title {
@@ -112,6 +128,10 @@
             @include responsive(tab) {
                 margin-bottom: 20px;
             }
+            @include responsive(phone) {
+                margin-bottom: 10px;
+                font-size: 24px;
+            }
         }
 
         &-subtitle {
@@ -120,6 +140,10 @@
             @include responsive(tab) {
                 text-align: center;
                 margin-bottom: 98px;
+            }
+            @include responsive(phone) {
+                margin-bottom: 35px;
+                font-size: 16px;
             }
         }
     }
@@ -130,6 +154,10 @@
         @include responsive(tab) {
             margin-bottom: 44px;
         }
+        @include responsive(phone) {
+            @include flex(center, flex-start);
+            margin-bottom: 4px;
+        }
     }
 
     &__amount {
@@ -138,6 +166,9 @@
         @include responsive(sm-desktop) {
             margin-right: 120px;
         }
+        @include responsive(phone) {
+            margin-right: 50px;
+        }
         position: relative;
     }
 
@@ -145,8 +176,15 @@
         font-size: 72px;
         font-weight: 500;
         text-align: center;
+        @include responsive(phone) {
+            font-size: 40px;
+        }
     }
-
+    &__amount .text {
+        @include responsive(phone) {
+            font-size: 9px;
+        }
+    }
     &__amount .fas {
         color: $black-blue;
         font-size: 22px;
@@ -156,11 +194,20 @@
         @include responsive(sm-desktop) {
             right: -30px;
         }
+        @include responsive(sm-desktop) {
+            font-size: 15px;
+            bottom: 45%;
+            right: -18px;
+        }
     }
 
     &__animal-image {
         width: 268px;
         height: 198px;
+        @include responsive(phone) {
+            width: 150px;
+            height: 120px;
+        }
     }
 
     &__plan {
@@ -179,6 +226,9 @@
             @include responsive(tab) {
                 margin-left: 10px;
             }
+            @include responsive(phone) {
+                margin-left: 0;
+            }
         }
 
         &-list {
@@ -189,6 +239,9 @@
             }
             @include responsive(tab) {
                 margin-top: 10px;
+            }
+            @include responsive(phone) {
+                margin-bottom: 0;
             }
             padding: 2px 0;
             border: {
@@ -211,6 +264,15 @@
                     left-width: 41px;
                 }
             }
+            @include responsive(phone) {
+                padding: 1px 0;
+                border: {
+                    top-width: 6px;
+                    bottom-width: 6px;
+                    right-width: 20px;
+                    left-width: 20px;
+                }
+            }
             background-color: $gray-secondary;
             border-radius: 2px;
             @include flex(center, space-between);
@@ -219,10 +281,18 @@
         &-item {
             position: relative;
             &_active {
+                @include responsive(phone) {
+                    width: 20px;
+                    height: 20px;
+                }
                 .yellow-dot::after {
                     content: "";
                     width: 40px;
                     height: 40px;
+                    @include responsive(phone) {
+                        width: 20px;
+                        height: 20px;
+                    }
                     position: absolute;
                     bottom: 50%;
                     left: 50%;
@@ -236,6 +306,10 @@
                     content: "";
                     width: 22px;
                     height: 22px;
+                    @include responsive(phone) {
+                        width: 5px;
+                        height: 5px;
+                    }
                     position: absolute;
                     border: 1px solid $color-secondary;
                     border-radius: 50%;
@@ -271,12 +345,19 @@
             @include responsive(sm-desktop) {
                 left: -25px;
             }
+            @include responsive(phone) {
+                bottom: -25px;
+            }
             padding: 20px;
             background-color: transparent;
             .yellow-dot {
                 display: inline-block;
                 width: 10px;
                 height: 10px;
+                @include responsive(phone) {
+                    width: 5px;
+                    height: 5px;
+                }
                 border-radius: 50%;
                 background-color: $yellow;
                 position: relative;
@@ -287,6 +368,10 @@
             content: "";
             width: 40px;
             height: 40px;
+            @include responsive(phone) {
+                width: 20px;
+                height: 20px;
+            }
             position: absolute;
             bottom: 50%;
             left: 50%;
@@ -300,6 +385,12 @@
             content: "";
             width: 22px;
             height: 22px;
+            @include responsive(phone) {
+                width: 10px;
+                height: 10px;
+                bottom: 45%;
+                left: 50%;
+            }
             position: absolute;
             border: 1px solid $color-secondary;
             border-radius: 50%;
@@ -323,6 +414,11 @@
                 bottom: -30px;
                 left: 0;
             }
+            @include responsive(phone) {
+                font-size: 13px;
+                bottom: -3px;
+                left: 15px;
+            }
         }
 
         &-btn:hover &-amount {
@@ -337,6 +433,10 @@
             }
             @include responsive(tab) {
                 margin-bottom: 32px;
+            }
+            @include responsive(phone) {
+                margin-top: 49px;
+                margin-bottom: 27px;
             }
             p {
                 color: $gray-secondary;
@@ -412,6 +512,14 @@
 
         .btn {
             margin-bottom: 32px;
+            @include responsive(phone) {
+                margin-bottom: 30px;
+            }
+        }
+    }
+    &__bottom-text {
+        @include responsive(phone) {
+            font-size: 15px;
         }
     }
 }
