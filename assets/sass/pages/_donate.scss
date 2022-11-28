@@ -1,5 +1,9 @@
 .banner {
     height: 390px;
+    @include responsive(tab) {
+        margin-top: 32px;
+        height: 335px;
+    }
     background: {
         image: url("../../assets/images/banner.png");
         size: cover;
@@ -15,6 +19,9 @@
 .help {
     padding: 40px 0;
     color: $white;
+    @include responsive(tab) {
+        padding: 30px 0 0;
+    }
 
     &__title {
         text-transform: uppercase;
@@ -24,6 +31,11 @@
         @include responsive(sm-desktop) {
             width: 760px;
             margin-bottom: 40px;
+        }
+        @include responsive(tab) {
+            width: 100%;
+            font-size: 24px;
+            margin-bottom: 20px;
         }
     }
 
@@ -38,6 +50,12 @@
         top: 10px;
         bottom: 180px;
     }
+    @include responsive(tab) {
+        padding: {
+            top: 34px;
+            bottom: 46px !important;
+        }
+    }
     @include responsive(sm-desktop) {
         padding-bottom: 30px;
     }
@@ -45,6 +63,9 @@
         font-size: 36px;
         font-weight: normal;
         margin-bottom: 60px;
+        @include responsive(tab) {
+            margin-bottom: 30px !important;
+        }
         color: $color-secondary;
         @include responsive(sm-desktop) {
             margin-bottom: 40px;
@@ -68,6 +89,14 @@
                 bottom: 46px;
             }
         }
+        @include responsive(tab) {
+            padding: {
+                top: 30px;
+                right: 0;
+                left: 0;
+                bottom: 30px;
+            }
+        }
         color: $black;
 
         &-title {
@@ -80,17 +109,27 @@
             @include responsive(sm-desktop) {
                 margin-bottom: 10px;
             }
+            @include responsive(tab) {
+                margin-bottom: 20px;
+            }
         }
 
         &-subtitle {
             font-size: 24px;
             margin-bottom: 107px;
+            @include responsive(tab) {
+                text-align: center;
+                margin-bottom: 98px;
+            }
         }
     }
 
     &__animal {
         @include flex(center, center);
         margin-bottom: 48px;
+        @include responsive(tab) {
+            margin-bottom: 44px;
+        }
     }
 
     &__amount {
@@ -128,12 +167,18 @@
         @include responsive(sm-desktop) {
             padding: 0 18px;
         }
+        @include responsive(tab) {
+            padding: 0;
+        }
         display: flex;
         flex-direction: column;
         align-items: center;
 
         &-title {
             align-self: start;
+            @include responsive(tab) {
+                margin-left: 10px;
+            }
         }
 
         &-list {
@@ -141,6 +186,9 @@
             margin: {
                 top: 18px;
                 bottom: 48px;
+            }
+            @include responsive(tab) {
+                margin-top: 10px;
             }
             padding: 2px 0;
             border: {
@@ -155,6 +203,12 @@
                 border: {
                     right-width: 15px;
                     left-width: 15px;
+                }
+            }
+            @include responsive(tab) {
+                border: {
+                    right-width: 41px;
+                    left-width: 41px;
                 }
             }
             background-color: $gray-secondary;
@@ -199,6 +253,12 @@
 
         &-item:first-child {
             @include responsive(sm-desktop) {
+                display: none;
+            }
+        }
+
+        &-item:nth-child(-n + 3) {
+            @include responsive(tab) {
                 display: none;
             }
         }
@@ -259,6 +319,10 @@
             @include responsive(sm-desktop) {
                 left: 15px;
             }
+            @include responsive(tab) {
+                bottom: -30px;
+                left: 0;
+            }
         }
 
         &-btn:hover &-amount {
@@ -271,6 +335,9 @@
                 top: 50px;
                 bottom: 28px;
             }
+            @include responsive(tab) {
+                margin-bottom: 32px;
+            }
             p {
                 color: $gray-secondary;
                 font-weight: 500;
@@ -282,6 +349,10 @@
             }
             input {
                 padding: 16px 9px;
+                @include responsive(tab) {
+                    padding: 10px 8px;
+                    width: 180px;
+                }
                 border: 1px solid $gray-secondary;
                 border-radius: 2px;
                 width: 268px;
