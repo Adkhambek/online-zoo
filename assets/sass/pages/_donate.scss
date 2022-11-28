@@ -21,6 +21,10 @@
         font-weight: normal;
         font-size: 36px;
         margin-bottom: 10px;
+        @include responsive(sm-desktop) {
+            width: 760px;
+            margin-bottom: 40px;
+        }
     }
 
     &__description {
@@ -34,11 +38,17 @@
         top: 10px;
         bottom: 180px;
     }
+    @include responsive(sm-desktop) {
+        padding-bottom: 30px;
+    }
     &__title {
         font-size: 36px;
         font-weight: normal;
         margin-bottom: 60px;
         color: $color-secondary;
+        @include responsive(sm-desktop) {
+            margin-bottom: 40px;
+        }
     }
 
     &__card {
@@ -50,6 +60,14 @@
             right: 92px;
             left: 92px;
         }
+        @include responsive(sm-desktop) {
+            padding: {
+                top: 20px;
+                right: 47px;
+                left: 47px;
+                bottom: 46px;
+            }
+        }
         color: $black;
 
         &-title {
@@ -58,6 +76,10 @@
             font-size: 48px;
             font-weight: normal;
             margin-bottom: 20px;
+
+            @include responsive(sm-desktop) {
+                margin-bottom: 10px;
+            }
         }
 
         &-subtitle {
@@ -73,13 +95,16 @@
 
     &__amount {
         margin-right: 90px;
+
+        @include responsive(sm-desktop) {
+            margin-right: 120px;
+        }
         position: relative;
     }
 
     &__amount .number {
         font-size: 72px;
         font-weight: 500;
-        margin-bottom: 11px;
         text-align: center;
     }
 
@@ -89,6 +114,9 @@
         position: absolute;
         right: -10px;
         bottom: 50%;
+        @include responsive(sm-desktop) {
+            right: -30px;
+        }
     }
 
     &__animal-image {
@@ -97,6 +125,9 @@
     }
 
     &__plan {
+        @include responsive(sm-desktop) {
+            padding: 0 18px;
+        }
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -115,10 +146,16 @@
             border: {
                 top-width: 12px;
                 bottom-width: 12px;
-                right-width: 31px;
-                left-width: 31px;
+                right-width: 30px;
+                left-width: 30px;
                 color: $secondary-black-blue;
                 style: solid;
+            }
+            @include responsive(sm-desktop) {
+                border: {
+                    right-width: 15px;
+                    left-width: 15px;
+                }
             }
             background-color: $gray-secondary;
             border-radius: 2px;
@@ -127,7 +164,6 @@
 
         &-item {
             position: relative;
-
             &_active {
                 .yellow-dot::after {
                     content: "";
@@ -161,11 +197,20 @@
             }
         }
 
+        &-item:first-child {
+            @include responsive(sm-desktop) {
+                display: none;
+            }
+        }
+
         &-btn {
             cursor: pointer;
             position: absolute;
             bottom: -28px;
             left: -20px;
+            @include responsive(sm-desktop) {
+                left: -25px;
+            }
             padding: 20px;
             background-color: transparent;
             .yellow-dot {
@@ -211,6 +256,9 @@
             position: absolute;
             bottom: -35px;
             left: -10px;
+            @include responsive(sm-desktop) {
+                left: 15px;
+            }
         }
 
         &-btn:hover &-amount {
