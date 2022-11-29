@@ -2,6 +2,7 @@
     &__list {
         @include flex;
     }
+
     &__item:not(:last-child) {
         margin-right: 58px;
         @include responsive(1599) {
@@ -25,8 +26,33 @@
 }
 
 .header .nav {
+    width: 100%;
     @include responsive(tab) {
+        padding-top: 10px;
         display: none;
+        background-color: $black;
+        position: absolute;
+        top: 32px;
+        left: 0;
+    }
+    .menu-list {
+        @include responsive(tab) {
+            font-size: 14px !important;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__item:last-child {
+        margin-left: auto;
+    }
+
+    .menu-item {
+        @include responsive(tab) {
+            margin-right: 0;
+            margin-bottom: 20px;
+            margin-left: 0 !important;
+        }
     }
 }
 

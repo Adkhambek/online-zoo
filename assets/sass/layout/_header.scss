@@ -8,6 +8,7 @@
     background-color: $black;
     color: $white;
     font-weight: 500;
+    position: relative;
     .container {
         @include flex;
         padding: 14px 0;
@@ -19,9 +20,6 @@
 
     &__copyright {
         margin-left: auto;
-        @include responsive(tab) {
-            display: none;
-        }
     }
 
     &__copyright:hover {
