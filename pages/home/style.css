@@ -708,11 +708,17 @@ a {
       width: 455px;
       height: 408px;
       object-fit: cover; } }
+  @media (max-width: 1599px) {
+    .backstage__image {
+      width: 48%; } }
   @media (max-width: 999px) {
     .backstage__image {
       display: none; } }
   .backstage__text-box {
     width: 465px; }
+    @media (max-width: 1599px) {
+      .backstage__text-box {
+        width: 50%; } }
     @media (max-width: 1000px) {
       .backstage__text-box {
         width: 454px; } }

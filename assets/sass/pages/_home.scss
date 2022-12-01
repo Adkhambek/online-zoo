@@ -177,6 +177,9 @@
             height: 408px;
             object-fit: cover;
         }
+        @include responsive(1599) {
+            width: 48%;
+        }
         @include responsive(999) {
             display: none;
         }
@@ -184,6 +187,9 @@
 
     &__text-box {
         width: 465px;
+        @include responsive(1599) {
+            width: 50%;
+        }
         @include responsive(sm-desktop) {
             width: 454px;
         }
