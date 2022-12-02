@@ -1,7 +1,7 @@
 .container {
     width: $container-width;
     @include responsive(1599) {
-        width: 72.5%;
+        width: 90%;
     }
     @include responsive(sm-desktop) {
         width: 940px;
@@ -47,4 +47,36 @@
     background-color: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(1px);
     z-index: 5;
+}
+
+.fade-in-right {
+    animation-name: right;
+    animation-duration: 1s;
+}
+
+.fade-in-left {
+    animation-name: left;
+    animation-duration: 1s;
+}
+
+@keyframes right {
+    from {
+        opacity: 0;
+        transform: translateX(70%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes left {
+    from {
+        opacity: 0;
+        transform: translateX(-70%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }

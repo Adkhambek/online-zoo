@@ -178,7 +178,7 @@
             object-fit: cover;
         }
         @include responsive(1599) {
-            width: 48%;
+            width: 45%;
         }
         @include responsive(999) {
             display: none;
@@ -259,19 +259,22 @@
     &__list {
         overflow-x: hidden;
         display: grid;
-        grid-template-columns: repeat(4, 366px);
+        grid-template-columns: repeat(3, 366px);
         grid-template-rows: 1fr 1fr;
+        justify-content: center;
         column-gap: $gap;
         row-gap: calc(#{$gap} - 10px);
         margin-bottom: 80px;
-        @include responsive(sm-desktop) {
-            grid-template-columns: repeat(4, 294px);
-            column-gap: 29px;
+        @include responsive(1599) {
             row-gap: 92px;
+        }
+        @include responsive(sm-desktop) {
+            grid-template-columns: repeat(3, 294px);
+            column-gap: 29px;
         }
         @include responsive(tab) {
             margin-bottom: 58px;
-            grid-template-columns: repeat(4, 285px);
+            grid-template-columns: repeat(2, 285px);
         }
         @include responsive(639) {
             margin-bottom: 20px;
@@ -331,6 +334,14 @@
 }
 
 .pet {
+    &:not(:nth-child(-n + 6)) {
+        display: none;
+    }
+    &:not(:nth-child(-n + 4)) {
+        @include responsive(tab) {
+            display: none;
+        }
+    }
     &:nth-child(n + 5) {
         @include responsive(phone) {
             display: none;
