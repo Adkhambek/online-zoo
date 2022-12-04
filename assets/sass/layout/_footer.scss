@@ -1,0 +1,210 @@
+.footer {
+    background-color: $footer-background;
+    color: $white;
+    padding: {
+        top: 40px;
+        bottom: 50px;
+    }
+    .container {
+        position: relative;
+    }
+    @include responsive(tab) {
+        padding: 13px 0;
+    }
+    @include responsive(639) {
+        padding: 20px 0;
+    }
+
+    &__top {
+        margin-bottom: 44px;
+        @include flex(flex-start, space-between);
+        @include responsive(tab) {
+            margin-bottom: 67px;
+        }
+        @include responsive(639) {
+            margin-bottom: 30px;
+        }
+        @include responsive(319) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__bottom {
+        @include flex(flex-end, flex-start);
+        @include responsive(1599) {
+            justify-content: space-between;
+        }
+        @include responsive(tab) {
+            justify-content: flex-start;
+            @include flex(flex-end, space-between);
+        }
+        @include responsive(639) {
+            flex-direction: column-reverse;
+        }
+        @include responsive(319) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .logo {
+        margin-bottom: 68px;
+        @include responsive(tab) {
+            margin-bottom: 32px;
+        }
+        @include responsive(639) {
+            margin: 0 0 86px !important;
+        }
+        @include responsive(319) {
+            margin: 0 0 10px !important;
+        }
+    }
+
+    &__left {
+        @include responsive(639) {
+            width: 100%;
+            text-align: center;
+        }
+
+        a {
+            @include responsive(639) {
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .social-list {
+        margin-right: 289px;
+        @include responsive(1599) {
+            margin-right: 0;
+        }
+        @include responsive(sm-desktop) {
+            margin-right: 180px;
+        }
+        @include responsive(999) {
+            margin-right: 0;
+        }
+        @include responsive(tab) {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 0;
+        }
+        @include responsive(639) {
+            top: 50px;
+            right: 50%;
+            transform: translateX(50%);
+            @include flex(center, center);
+        }
+        @include responsive(319) {
+            position: static;
+            transform: none;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    .social-item {
+        @include responsive(tab) {
+            margin-bottom: 20px;
+        }
+        &:not(:last-child) {
+            @include responsive(639) {
+                margin-right: 30px;
+            }
+            @include responsive(319) {
+                margin-right: 0;
+            }
+        }
+        p {
+            @include responsive(tab) {
+                display: none;
+            }
+            @include responsive(319) {
+                margin-left: 10px;
+                display: block;
+            }
+        }
+    }
+
+    .social-box {
+        @include responsive(tab) {
+            margin: 0;
+        }
+    }
+
+    .subscription {
+        margin-right: 33px;
+        @include responsive(999) {
+            display: none;
+        }
+    }
+
+    nav {
+        font-weight: normal;
+        @include responsive(639) {
+            align-self: center;
+        }
+        @include responsive(319) {
+            margin-bottom: 30px;
+        }
+    }
+
+    .author {
+        font-weight: 100;
+        margin-left: 160px;
+        @include responsive(1599) {
+            margin: 0;
+        }
+        @include responsive(sm-desktop) {
+            margin-left: 85px;
+        }
+        @include responsive(999) {
+            margin: 0;
+        }
+        @include responsive(639) {
+            margin-bottom: 30px;
+        }
+        @include responsive(319) {
+            text-align: center;
+        }
+    }
+
+    .designer {
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        font-weight: 400;
+        font-size: 24px;
+        margin-bottom: 14px;
+    }
+
+    form {
+        @include flex;
+    }
+
+    input[type="email"] {
+        width: 228px;
+        padding: 10px;
+        margin-right: 10px;
+        border: 1px solid $color-secondary;
+        border-radius: 2px;
+        color: $white;
+        font-size: 16px;
+        outline: none;
+    }
+
+    input[type="email"]:focus {
+        border: 1px solid $green;
+    }
+
+    input[type="email"]:focus + button {
+        color: $green;
+        border: 1px solid $green;
+    }
+
+    input[type="email"]::placeholder {
+        color: $smoke-gray;
+    }
+}

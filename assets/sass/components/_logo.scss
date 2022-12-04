@@ -1,0 +1,59 @@
+.logo {
+    width: 82px;
+    height: 52px;
+    @include flex;
+    border: 1px solid $white;
+    border-radius: 2px;
+    margin-right: 63px;
+    position: relative;
+
+    &__title {
+        text-align: center;
+        font-size: 19px !important;
+        font-weight: normal !important;
+        margin: 0 !important;
+    }
+
+    &__image {
+        position: absolute;
+        bottom: 5px;
+        left: 10px;
+    }
+}
+
+.header .logo {
+    @include responsive(tab) {
+        width: 46px;
+        height: auto;
+        border: none;
+        margin: 0;
+    }
+    &__title {
+        @include responsive(tab) {
+            font-size: 12px !important;
+        }
+    }
+
+    &__image {
+        @include responsive(tab) {
+            height: 13px;
+            bottom: 2px;
+            left: 5px;
+        }
+    }
+}
+
+.footer .logo {
+    @include responsive(639) {
+        display: inline-block;
+        width: auto;
+        height: auto;
+        border: none;
+    }
+    &__image {
+        @include responsive(639) {
+            bottom: 5px;
+            left: 74px;
+        }
+    }
+}

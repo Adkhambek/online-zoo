@@ -1,0 +1,92 @@
+@mixin flex($ai: center, $jc: flex-start) {
+    display: flex;
+    align-items: $ai;
+    justify-content: $jc;
+}
+
+@mixin orange-gradient() {
+    background: linear-gradient(
+            315.75deg,
+            rgba(254, 210, 144, 0.7) 30.06%,
+            #febdab 100.95%,
+            rgba(254, 210, 144, 0.7) 106.36%
+        ),
+        linear-gradient(
+            315.75deg,
+            rgba(254, 189, 171, 0.74) 30.06%,
+            rgba(243, 169, 248, 0.66) 50.74%,
+            #e0d8f0 80.49%,
+            #eaf7fe 127.9%,
+            #eaf7fe 149.54%
+        ),
+        linear-gradient(
+            315.75deg,
+            rgba(254, 189, 171, 0.74) 30.06%,
+            rgba(243, 169, 248, 0.66) 50.74%,
+            #e0d8f0 80.49%,
+            #eaf7fe 127.9%,
+            #eaf7fe 149.54%
+        );
+}
+
+@mixin pink_border() {
+    background-image: linear-gradient(
+            315.75deg,
+            rgba(254, 189, 171, 0.74) 30.06%,
+            rgba(243, 169, 248, 0.66) 50.74%,
+            #e0d8f0 80.49%,
+            #eaf7fe 127.9%,
+            #eaf7fe 149.54%
+        ),
+        linear-gradient(
+            315.75deg,
+            rgba(254, 189, 171, 0.74) 30.06%,
+            rgba(243, 169, 248, 0.66) 50.74%,
+            #e0d8f0 80.49%,
+            #eaf7fe 127.9%,
+            #eaf7fe 149.54%
+        );
+}
+
+@mixin frosted_glass_white() {
+    background: rgba(253, 253, 255, 0.52);
+    backdrop-filter: blur(2px);
+}
+
+@mixin responsive($breakpoint) {
+    @if $breakpoint == phone {
+        @media (max-width: 320px) {
+            @content;
+        }
+    }
+    @if $breakpoint == 319 {
+        @media (max-width: 319px) {
+            @content;
+        }
+    }
+    @if $breakpoint == tab {
+        @media (max-width: 640px) {
+            @content;
+        }
+    }
+    @if $breakpoint == 639 {
+        @media (max-width: 639px) {
+            @content;
+        }
+    }
+    @if $breakpoint == sm-desktop {
+        @media (max-width: 1000px) {
+            @content;
+        }
+    }
+    @if $breakpoint == 999 {
+        @media (max-width: 999px) {
+            @content;
+        }
+    }
+    @if $breakpoint == 1599 {
+        @media (max-width: 1599px) {
+            @content;
+        }
+    }
+}

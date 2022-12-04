@@ -1,0 +1,121 @@
+.btn {
+    &,
+    &:link,
+    &:visited {
+        @include flex(center, center);
+        text-transform: uppercase;
+        background: linear-gradient(
+            113.96deg,
+            $color-secondary 1.49%,
+            $color-border 101.44%
+        );
+        color: $white;
+        width: 298px;
+        height: 54px;
+        @include responsive(319) {
+            width: 90%;
+            text-align: center;
+        }
+    }
+
+    &:hover {
+        background-image: none;
+        background-color: $dark-orange;
+    }
+
+    &:active {
+        background-image: none;
+        background-color: $green;
+    }
+
+    &_pill {
+        border-radius: 25px;
+    }
+
+    &_rounded {
+        border-radius: 5px;
+    }
+}
+
+.slide-btn {
+    @include responsive(639) {
+        display: none;
+    }
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    font-size: 20px;
+    background: linear-gradient(
+        113.96deg,
+        $color-secondary 1.49%,
+        $color-border 101.44%
+    );
+    color: $white;
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(-50%);
+
+    &:hover {
+        background-image: none;
+        background-color: $dark-orange;
+    }
+
+    &:active {
+        background-image: none;
+        background-color: $green;
+    }
+
+    &_prev {
+        left: -80px;
+        @include responsive(1599) {
+            left: 320px;
+        }
+        @include responsive(999) {
+            left: 220px;
+        }
+    }
+
+    &_next {
+        right: -80px;
+        @include responsive(1599) {
+            right: 320px;
+        }
+        @include responsive(999) {
+            right: 220px;
+        }
+    }
+}
+
+.submit-btn {
+    cursor: pointer;
+    background-color: $light-gray;
+    color: $black;
+    font-size: 16px;
+    border: 1px solid $black-blue;
+    border-radius: 5px;
+    padding: 10px 40px;
+
+    &:active {
+        color: $green;
+        border: 1px solid $green;
+    }
+}
+
+.menu-btn {
+    @include responsive(tab) {
+        display: inline-block;
+    }
+    background-color: transparent;
+    color: $white;
+    font-size: 18px;
+}
+
+.feed-button {
+    @include responsive(tab) {
+        width: 240px !important;
+    }
+    @include responsive(319) {
+        width: 90% !important;
+        text-align: center;
+    }
+}
