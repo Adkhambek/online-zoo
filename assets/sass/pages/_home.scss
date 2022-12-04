@@ -709,18 +709,13 @@
 
     &__list {
         margin-bottom: 21px;
+        max-width: 100%;
         overflow-x: hidden;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        @include responsive(sm-desktop) {
-            grid-template-columns: repeat(4, 293px);
-        }
+        display: flex;
         @include responsive(tab) {
-            grid-template-columns: 1fr;
-            row-gap: 15px;
             margin-bottom: 40px;
+            flex-wrap: wrap;
         }
-        column-gap: $gap;
     }
 
     &__item {
@@ -728,10 +723,27 @@
         border: 1px solid $color-border;
         border-radius: 20px;
         padding: 15px;
-        @include responsive(tab) {
-            padding: 15px 29px 8px 12px;
+        margin-right: $gap;
+        min-width: calc((100% - 3 * #{$gap}) / 4);
+        @include responsive(sm-desktop) {
+            min-width: calc((100% - 2 * #{$gap}) / 3);
+        }
+
+        &:not(:nth-child(-n + 3)) {
+            @include responsive(tab) {
+                display: none;
+            }
+        }
+        &:not(:nth-child(3)) {
+            @include responsive(tab) {
+                margin-bottom: 15px;
+            }
         }
         @include responsive(tab) {
+            padding: 15px 29px 8px 12px;
+            min-width: 100%;
+        }
+        @include responsive(phone) {
             padding: 10px 29px 8px 12px;
         }
         background-color: $light-gray;
@@ -766,13 +778,14 @@
     }
 
     &__message {
-        height: 310px;
+        max-height: 310px;
         overflow-y: hidden;
         line-height: 120%;
         @include responsive(tab) {
             max-height: 38px;
             overflow-y: hidden;
             margin-left: 6px;
+            cursor: pointer;
         }
     }
 
@@ -814,5 +827,26 @@
         @include responsive(tab) {
             margin: 0 auto;
         }
+    }
+}
+
+.review-modal {
+    width: 50%;
+    background-color: $white;
+    padding: 40px;
+    border-radius: 15px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+
+    button {
+        background-color: transparent;
+        font-size: 25px;
+        color: $black;
+        position: absolute;
+        top: 20px;
+        right: 20px;
     }
 }

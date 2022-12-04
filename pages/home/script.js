@@ -8,15 +8,22 @@ const pets = document.querySelectorAll(".pet");
 const petsList = document.querySelector(".pets__list");
 const slideBtnPrev = document.querySelector(".slide-btn_prev");
 const slideBtnNext = document.querySelector(".slide-btn_next");
+const rangeInput = document.querySelector("input[type='range']");
+const reviews = document.querySelectorAll(".testimonial__item");
+const reviewBtns = document.querySelectorAll(".testimonial__message");
+const reviewModal = document.querySelector(".review-modal");
+const reviewCloseBtn = document.querySelector(".review-close-btn");
+
 const tabMedia = window.matchMedia("(max-width: 688px)");
 let isMenuOpen = false;
 let slideIndex = 1;
+let rangeCount = 1;
 
 burger.addEventListener("click", (e) => {
-    return !isMenuOpen ? openMenu() : closeMenu();
+    return !isMenuOpen ? openMenu() : close();
 });
 
-overlay.addEventListener("click", closeMenu);
+overlay.addEventListener("click", close);
 
 slideBtnNext.addEventListener("click", () => {
     if (tabMedia.matches) displayPets(1, 4, "fade-in-right");
@@ -27,6 +34,22 @@ slideBtnPrev.addEventListener("click", () => {
     if (tabMedia.matches) displayPets(-1, 4, "fade-in-left");
     else displayPets(-1, 6, "fade-in-left");
 });
+
+rangeInput.addEventListener("input", () => {
+    reviews.forEach((review) => {
+        review.classList.remove("hidden");
+    });
+    let range = +rangeInput.value;
+    for (let i = 0; i < range - 1; i++) {
+        reviews[i].classList.add("hidden");
+    }
+});
+
+reviewBtns.forEach((reviewBtn) => {
+    reviewBtn.addEventListener("click", (e) => openModal(e));
+});
+
+reviewCloseBtn.addEventListener("click", close);
 
 function randomOrders(start, end, limit) {
     const orders = [];
@@ -77,10 +100,25 @@ function openMenu() {
     isMenuOpen = true;
 }
 
-function closeMenu() {
-    burger.querySelector("i").classList.replace("fa-times", "fa-bars");
-    document.body.style.overflowY = "scroll";
-    overlay.classList.add("hidden");
-    nav.removeAttribute("style");
-    isMenuOpen = false;
+function close() {
+    if (isMenuOpen === true) {
+        burger.querySelector("i").classList.replace("fa-times", "fa-bars");
+        document.body.style.overflowY = "scroll";
+        overlay.classList.add("hidden");
+        nav.removeAttribute("style");
+        isMenuOpen = false;
+    } else {
+        document.body.style.overflowY = "scroll";
+        overlay.classList.add("hidden");
+        reviewModal.classList.add("hidden");
+    }
+}
+
+function openModal(e) {
+    if (tabMedia.matches) {
+        overlay.classList.remove("hidden");
+        reviewModal.lastChild.textContent = e.target.textContent;
+        reviewModal.classList.remove("hidden");
+        document.body.style.overflowY = "hidden";
+    } else return;
 }
