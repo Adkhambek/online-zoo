@@ -11,7 +11,7 @@
             integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
             crossorigin="anonymous"
         />
-        <link rel="stylesheet" href="./style.min.css" />
+        <link rel="stylesheet" href="./style.css" />
     </head>
     <body>
         <header class="header">
@@ -24,7 +24,7 @@
                     />
                     <h1 class="logo__title">PetStory online</h1>
                 </a>
-                <nav class="nav" aria-label="header nav">
+                <nav class="header__nav nav" aria-label="header nav">
                     <ul class="nav__list">
                         <li class="nav__item">
                             <a href="/online-zoo/pages/home" class="nav__link"
@@ -45,18 +45,21 @@
                         <li class="nav__item">
                             <a href="#" class="nav__link">Contact us</a>
                         </li>
+                        <li class="nav__item">
+                            <a
+                                href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online"
+                                class="copyright header__copyright"
+                                >Designed by &copy;</a
+                            >
+                        </li>
                     </ul>
                 </nav>
-                <a
-                    href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online"
-                    class="header__copyright"
-                    >Designed by &copy;</a
-                >
                 <button class="menu-btn hidden">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
         </header>
+        <div class="overlay hidden"></div>
         <section class="banner">
             <h2 class="visually-hidden">Banner for donate page</h2>
         </section>
@@ -127,9 +130,7 @@
                                         >
                                     </button>
                                 </li>
-                                <li
-                                    class="feed__plan-item feed__plan-item_active"
-                                >
+                                <li class="feed__plan-item">
                                     <button
                                         class="feed__plan-btn"
                                         aria-label="yellow dot button"
@@ -162,7 +163,9 @@
                                         >
                                     </button>
                                 </li>
-                                <li class="feed__plan-item">
+                                <li
+                                    class="feed__plan-item feed__plan-item_active"
+                                >
                                     <button
                                         class="feed__plan-btn"
                                         aria-label="yellow dot button"
@@ -198,9 +201,11 @@
                             </ul>
                             <label class="feed__plan-amount-input">
                                 <input
+                                    value="100"
                                     type="number"
                                     placeholder="Another amount"
-                                    maxlength="4"
+                                    min="0"
+                                    max="9999"
                                 />
                                 <p>$</p>
                             </label>
