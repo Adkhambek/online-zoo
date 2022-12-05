@@ -284,10 +284,6 @@
         &-item {
             position: relative;
             &_active {
-                @include responsive(phone) {
-                    width: 20px;
-                    height: 20px;
-                }
                 .yellow-dot::after {
                     content: "";
                     width: 40px;
@@ -310,8 +306,10 @@
                     width: 22px;
                     height: 22px;
                     @include responsive(phone) {
-                        width: 5px;
-                        height: 5px;
+                        width: 10px !important;
+                        height: 10px !important;
+                        bottom: 45% !important;
+                        left: 50% !important;
                     }
                     position: absolute;
                     border: 1px solid $color-secondary;
