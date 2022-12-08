@@ -822,10 +822,6 @@ a {
           border-left-width: 20px; } }
     .feed__plan-item {
       position: relative; }
-      @media (max-width: 320px) {
-        .feed__plan-item_active {
-          width: 20px;
-          height: 20px; } }
       .feed__plan-item_active .yellow-dot::after {
         content: "";
         width: 40px;
@@ -854,8 +850,10 @@ a {
         transform: translate(-50%, 50%); }
         @media (max-width: 320px) {
           .feed__plan-item_active button::after {
-            width: 5px;
-            height: 5px; } }
+            width: 10px !important;
+            height: 10px !important;
+            bottom: 45% !important;
+            left: 50% !important; } }
       .feed__plan-item_active .feed__plan-amount {
         color: #f9804b; }
     @media (max-width: 1000px) {

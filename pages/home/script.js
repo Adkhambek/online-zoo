@@ -35,11 +35,21 @@ slideBtnPrev.addEventListener("click", () => {
     else displayPets(-1, 6, "fade-in-left");
 });
 
-rangeInput.addEventListener("input", () => {
+rangeInput.addEventListener("input", async () => {
     reviews.forEach((review) => {
         review.classList.remove("hidden");
     });
     let range = +rangeInput.value;
+    for (let i = range - 1; i < reviews.length; i++) {
+        reviews[i].classList.remove("fade-in-right");
+        reviews[i].offsetWidth = reviews[i].offsetWidth;
+    }
+    for (let i = range - 1; i < reviews.length; i++) {
+        reviews[i].classList.add("fade-in-right");
+        reviews[i].addEventListener("animationend", () => {
+            reviews[i].classList.remove("fade-in-right");
+        });
+    }
     for (let i = 0; i < range - 1; i++) {
         reviews[i].classList.add("hidden");
     }
@@ -75,6 +85,7 @@ function displayPets(n, limit, animation) {
     if (endIndex > pets.length) endIndex = pets.length;
     for (let i = startIndex, j = 0; i < endIndex; i++) {
         pets[i].className = "pet";
+        pets[i].offsetWidth = pets[i].offsetWidth;
         pets[i].style.display = "grid";
         pets[i].style.order = orders[j];
         pets[i].classList.add(animation);

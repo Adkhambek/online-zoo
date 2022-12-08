@@ -4,12 +4,12 @@
     "description": "Online-zoo is a platform that contains information about animals from various zoos with webcams.",
     "main": "index.js",
     "scripts": {
-        "watch:sass": "node-sass assets/sass/main.scss pages/donate/style.css -w",
+        "watch:sass": "node-sass assets/sass/main.scss pages/home/style.css -w",
         "server": "live-server",
         "start": "npm-run-all --parallel watch:sass server",
-        "compile:sass": "node-sass assets/sass/main.scss pages/donate/style.css",
-        "prefix": "postcss --use autoprefixer -b 'last 10 versions' pages/donate/style.css -o pages/donate/style.prefix.css",
-        "compress": "node-sass pages/donate/style.prefix.css pages/donate/style.min.css --output-style compressed",
+        "compile:sass": "node-sass assets/sass/main.scss pages/home/style.css",
+        "prefix": "postcss --use autoprefixer -b 'last 10 versions' pages/home/style.css -o pages/home/style.prefix.css",
+        "compress": "node-sass pages/home/style.prefix.css pages/home/style.min.css --output-style compressed",
         "build": "npm-run-all compile:sass prefix compress"
     },
     "keywords": [],
